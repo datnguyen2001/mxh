@@ -1,0 +1,340 @@
+.box-comment-v2{
+    border: 1px solid #EBEBEB;
+    border-radius: 4px;
+    background: #FAFAFA;
+    padding: 16px;
+}
+.box-comment-v2 .view-more{
+    border: 1px solid #EBEBEB!important;
+    border-radius: 4px!important;
+    background: #FFFFFF!important;
+    color: #0098D1!important;
+}
+.box-comment-v2 .username-reply{
+    font-weight: 600;
+}
+.detail__comment.box-comment-v2 .box-comment .btn-comment,
+.detail__comment.box-comment-v2.blNoLogin .input-info input,
+.detail__comment.box-comment-v2.blNoLogin .input-info input{
+    background: #FFFFFF!important;
+
+}
+.detail__comment.box-comment-v2 .box-comment .btn-comment{
+    height: 80px
+}
+#boxCommentPopup .box-comment-v2.detail__comment .box-reply-content .box-comment,
+#boxCommentPopup .detail__comment.box-comment-v2 .formreplaycomment .box-comment{
+    padding: 0;
+    background: #fff;
+    border:0;
+}
+#boxCommentPopup .box-comment-v2.detail__comment .box-reply-content .btn-comment,
+#boxCommentPopup.detail__comment.box-comment-v2.blNoLogin .box-reply-content .input-info input,
+#boxCommentPopup .detail__comment.box-comment-v2.blNoLogin .box-reply-content .input-info input,
+#boxCommentPopup .detail__comment.box-comment-v2 .formreplaycomment .btn-comment,
+#boxCommentPopup .detail__comment.box-comment-v2.blNoLogin .formreplaycomment .box-comment  .input-info input
+{
+    background: #FAFAFA!important;
+}
+.detail__comment.box-comment-v2 .box-comment .box-bottom .btn-submit{
+    color: #FFFFFF!important;
+}
+.detail__comment.box-comment-v2 .list-comment .item{
+    border-bottom: 1px solid #EBEBEB;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+}
+.detail__comment.box-comment-v2 .list-comment .item:last-child{
+    border-bottom:0px;
+    margin-bottom: 16px;
+    padding-bottom: 0px;
+}
+.detail__comment.box-comment-v2 .list-comment .item .box-reply{
+    margin: 0;
+}
+.detail__comment.box-comment-v2 .list-comment .item .item-reply{
+    padding-top: 16px;
+}
+.detail__comment.box-comment-v2 .box-comment .text{
+    font-family: 'Merriweather';
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 28px;
+    border-bottom: 1px solid #0098D1;
+    width: fit-content;
+}
+.detail__comment.box-comment-v2 .list-comment .item:first-child{
+    padding-top: 0px;
+}
+.detail__comment.box-comment-v2 .list-comment .item .box-reply{
+    width: 100%;
+}
+.detail__comment.box-comment-v2 .list-comment .item .box-reply-content .item-content .item-bottom .like-action{
+    display: block!important;
+}
+.detail__comment.box-comment-v2 .list-comment .item .box-reply-content .item-content .item-bottom .like-action .total-like{
+    margin-left: 5px;
+}
+.detail__comment.box-comment-v2 .list-comment .item .box-reply-content .item-content .item-bottom .item-ls.cm-share,
+.detail__comment.box-comment-v2 .list-comment .item .box-reply-content .item-content .item-bottom .item-ls.rep{
+    display: block!important;
+}
+.open-modalcomment .modal__bg {
+    visibility: visible;
+    opacity: .6;
+}
+.modal__bg {
+    position: fixed;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    transition: visibility 0s,opacity .3s linear;
+    background: #000 !important;
+    z-index: 98!important;
+}
+.mobile.modal__bg{
+    z-index: 97!important;
+}
+.modal__commentpopup {
+    position: fixed;
+    z-index: 98;
+    right: 0px;
+    top: 0;
+    width: 672px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s,opacity .3s linear;
+    background: #fff;
+    box-shadow: 0 0 8px rgba(0,0,0,.12);
+    height: 100vh;
+}
+.modal__commentpopup.mobile{
+    bottom: 0;
+    width: 100%;
+    z-index: 98;
+    height: 90%;
+    top:auto;
+}
+.open-modalcomment .modal__commentpopup {
+    visibility: visible;
+    opacity: 1;
+}
+.modal__commentpopup .modal__content {
+    overflow: hidden;
+    height: 100%;
+}
+#boxCommentPopup .box-comment-v2{
+    padding: 0;
+    background: #ffffff;
+    border: none;
+}
+#boxCommentPopup .box-comment-v2.detail__comment .box-comment {
+    width: 100%;
+    padding: 24px 32px;
+    background: #FAFAFA;
+    border: 1px solid #EBEBEB;
+}
+#boxCommentPopup .box-comment-v2.detail__comment .cmbl{
+    padding: 24px 32px;
+    height: max-content;
+    overflow-y:auto ;
+    max-height: 620px;
+    padding-top: 0;
+}
+#boxCommentPopup .box-comment-v2.detail__comment .filter_coment{
+    padding: 24px 0;
+    padding-bottom: 10px;
+    margin: 0 32px;
+}
+.modal__commentpopup .close-modal {
+    position: absolute;
+    right: 32px;
+    top: 24px;
+}
+.modal__commentpopup.mobile .close-modal {
+    right: 15px;
+}
+body.open-modalcomment,body.show-alert-box{
+    overflow: hidden;
+}
+#boxCommentPopup .login-comment{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    cursor: pointer;
+    color: #8B8B8B;
+}
+#boxCommentPopup .box-bottom.isLogin .login-comment{
+    display: none;
+}
+#boxCommentPopup .box-bottom
+{
+    font-family: 'Inter';
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+#boxCommentPopup .box-comment-v2.detail__comment .cmbl::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+#boxCommentPopup .box-comment-v2.detail__comment .cmbl::-webkit-scrollbar-thumb {
+    background-color: #0098D1;
+    border-radius: 4px;
+}
+#boxCommentPopup .box-comment-v2.detail__comment .cmbl::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+.mobile #boxCommentPopup .box-comment-v2.detail__comment .box-comment{
+    padding: 24px 15px;
+}
+.mobile #boxCommentPopup .box-comment-v2.detail__comment .filter_coment{
+    margin: 0 15px;
+}
+.mobile #boxCommentPopup .box-comment-v2.detail__comment .cmbl {
+    padding: 24px 15px;
+}
+.alert-box.show{
+    z-index:100;
+    height: 100%;
+}
+
+.box-comment .input-info {
+    display: none;
+}
+.blNoLogin .box-comment .input-info{
+    display: grid;
+    column-gap: 20px;
+    justify-content: space-between;
+    grid-template-columns: calc(50% - 10px) calc(50% - 10px);
+    margin-bottom: 20px;
+}
+.blNoLogin .inval .require{
+    border: 1px solid #9F224E;
+}
+.blNoLogin .inval {
+    position: relative;
+}
+.blNoLogin .inval.t-content:after,
+.blNoLogin .inval.t-content:after{
+    content: "Bạn chưa nhập nội dung bình luận.";
+    display: block;
+    width: 100%;
+    font: 400 13px/15px arial;
+    color: #9F224E;
+    bottom: 10px;
+    left: 0;
+    position: absolute;
+}
+.blNoLogin .inval.t-content{
+    padding-bottom: 15px;
+}
+.blNoLogin .inval.umail:after{
+    content: "Hãy nhập email";
+    font: 400 13px/15px arial;
+    color: #9F224E;
+    display: block;
+    margin-top: 4px;
+}
+.blNoLogin .inval.uname:after{
+    content: "Hãy nhập họ và tên";
+    font: 400 13px/15px arial;
+    color: #9F224E;
+    margin-top: 4px;
+
+}
+.blNoLogin .box-comment:has(.inval) .input-info{
+    margin-bottom: 26px;
+}
+.blNoLogin .erroMail:after{
+    content: "Email bạn nhập không hợp lệ";
+    font: 400 13px/15px arial;
+    color: #9F224E;
+    display: block;
+    margin-top: 4px;
+}
+#commentNologin{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #858585;
+    cursor: pointer;
+}
+@media (max-width: 767px) {
+    .blNoLogin .box-comment .input-info{
+        grid-template-columns: calc(100%);
+        row-gap: 10px;
+    }
+
+    .blNoLogin .box-comment .input-info{
+        margin-bottom: unset;
+    }
+    .blNoLogin .box-comment:has(.inval) .input-info{
+        margin-bottom: -10px;
+    }
+}
+
+.box-bottom.isLogin {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+.box-bottom.isLogin .box-user {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.box-bottom.isLogin .box-user .avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 4px;
+}
+.box-bottom.isLogin .box-user .avatar img{
+    height: 100%;
+}
+.box-bottom.isLogin .box-user .name
+{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #292929;
+    display: block;
+    width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.filter_coment {
+    color: #ccc;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 1.3;
+    margin: 15px 0;
+}
+.filter_coment a {
+    font: 400 14px/1.3 arial;
+    position: relative;
+    color: #9F9F9F;
+    margin-right: 20px;
+    padding-bottom: 11px;
+}
+.filter_coment a.active {
+    color: #0098D1 !important;
+    font-weight: 700;
+    border-bottom: 1px solid #0098D1;
+}

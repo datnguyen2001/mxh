@@ -1,0 +1,313 @@
+/*bài gltt*/
+.tt_gltt {
+    width: 126px;
+    height: 22px;
+    background: #ff0000;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: center;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.detail--interView .detail-viewmore {
+    display: flex;
+    background: #0098d1;
+    border-radius: 3px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #fff;
+}
+.detail--interView .modal {
+    display: none;
+}
+.detail--interView .modal.show {
+    display: block;
+}
+.detail--interView .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 11;
+    background: #fff;
+    display: none;
+    transform: translate(-50%, -50%);
+    width: 640px;
+}
+.detail--interView .modal .modal-header {
+    position: relative;
+    padding: 22px 15px 15px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #0098d1;
+    border-bottom: 1px solid #e5e5e5;
+}
+.detail--interView .modal .modal-header .close {
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    background: #fff;
+    top: -20px;
+    right: -20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.detail--interView .modal .modal-content {
+    padding: 20px;
+}
+.detail--interView .modal .modal-question-form .row .label {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    color: #666;
+    margin-bottom: 10px;
+}
+.detail--interView .modal .modal-question-form .row .btn {
+    border: 1px solid #bfd7ea;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 0 10px;
+    width: 100%;
+    height: 35px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #757575;
+}
+.detail--interView .modal .modal-question-form .row.row2 {
+    display: flex;
+}
+.detail--interView .modal .modal-question-form .row {
+    margin-bottom: 20px;
+}
+.detail--interView .modal .modal-question-form .row.row2 .col-input {
+    width: 330px;
+    margin-right: 20px;
+}
+.detail--interView .captcha-info {
+    display: flex;
+    min-width: 50%;
+    align-items: center;
+}
+.detail--interView .captcha-info img.imgcaptchaapi {
+    max-width: 90px;
+    height: 35px;
+    margin: 0 8px;
+}
+.detail--interView .captcha-info .refresh-captcha {
+    width: 25px;
+    position: relative;
+    top: 5px;
+}
+.detail--interView .modal .modal-question-form .row .submit {
+    padding: 0 35px;
+    display: inline-flex;
+    background: #0098d1;
+    border-radius: 3px;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #fff;
+    width: 100px;
+    margin: auto;
+}
+.dev_inter_view {
+    display: contents;
+    align-items: center;
+}
+.detail--interView .modal-bg {
+    background: #000;
+    opacity: 0.6;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.open-modal.detail--interView .modal-bg {
+    display: block;
+}
+.modal .modal-question-form .row textarea {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #757575;
+    width: 100%;
+    height: 120px;
+    border: 1px solid #bfd7ea;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+#interview-content-place {
+    margin-top: 65px;
+}
+#interview-content-place .avatar_u {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#interview-content-place .detail-auser .avatar_u {
+    margin-left: 20px;
+}
+#interview-content-place * {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#interview-content-place .VCSortableInPreviewMode[type="photo"] {
+    margin-bottom: 16px;
+}
+#interview-content-place .inter-flex {
+    display: flex;
+    column-gap: 16px;
+    align-items: center;
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 16px;
+    width: 100%;
+}
+#interview-content-place .detail-question .detail-quser .user-name {
+    width: calc(100% - 56px);
+}
+#interview-content-place .detail-question .user-name {
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 16px;
+    color: #292929;
+}
+#interview-content-place .detail-question {
+    display: block;
+}
+#interview-content-place .detail-a.interview-answer {
+    background: #c6ebf9;
+    padding: 24px;
+    width: calc(100% + 48px);
+    margin-left: -24px;
+    margin-top: 24px;
+    position: relative;
+    display: inline-block;
+}
+#interview-content-place .detail-a.interview-answer::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 0;
+    border-left: 12px solid #fafafa;
+    border-right: 12px solid #fafafa;
+    border-bottom: 15px solid #c6ebf9;
+    position: absolute;
+    top: -15px;
+    left: 23px;
+}
+#interview-content-place .detail-question {
+    background: #fafafa;
+    padding: 24px 24px 0 24px;
+    margin-bottom: 24px;
+    border: 1px solid #ebebeb;
+    border-radius: 4px;
+}
+#interview-content-place .detail-q {
+    padding-top: 16px;
+}
+
+#interview-content-place .detail-a.interview-answer .VCSortableInPreviewMode .PhotoCMS_Caption,
+#interview-content-place .detail-a.interview-answer .VCSortableInPreviewMode .VideoCMS_Caption {
+    background: #c6ebf9;
+    padding: 8px 0;
+    max-width: 100%;
+    margin-bottom: 16px;
+}
+#interview-content-place .VCSortableInPreviewMode .PhotoCMS_Caption:before,
+#interview-content-place .VCSortableInPreviewMode .VideoCMS_Caption:before,
+#interview-content-place .VCSortableInPreviewMode .PhotoCMS_Caption:after,
+#interview-content-place .VCSortableInPreviewMode .VideoCMS_Caption:after {
+    background: #58cefa;
+}
+#interview-content-place .detail-a.interview-answer .inter-flex {
+    border-bottom: 1px solid #58cefa;
+    margin-bottom: 16px;
+    justify-content: flex-end;
+}
+.title--inter-view {
+    font-family: "Merriweather";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #292929;
+    margin-bottom: 20px !important;
+    display: block;
+}
+.title--inter-view::before {
+    content: "";
+    width: 100%;
+    display: block;
+    border-top: 2px solid #0098d1;
+    border-bottom: 1px solid #0098d1;
+    height: 5px;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+}
+#interview-content-place .detail-auser .auser-content {
+    display: block;
+    text-align: right;
+}
+#interview-content-place .detail-auser .auser-content .add {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #292929;
+    display: block;
+}
+#interview-content-place .detail-auser {
+    display: flex;
+    align-items: center;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #58cefa;
+    justify-content: flex-end;
+}
+#interview-content-place .quser-content .add {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #292929;
+    display: block;
+}
+/*end bài gltt*/

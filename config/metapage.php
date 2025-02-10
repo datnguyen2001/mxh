@@ -1,0 +1,63 @@
+<?php
+return
+    [
+        "Home" => [
+            "title" => 'title',
+            "description" => 'description',
+            "keywords" => 'keywords',
+            "news_keywords" => 'news_keywords',
+            "og:title" => 'og:title',
+            "og:description" => 'og:description',
+            "og:image" => 'og:image',
+        ],
+        "Media" => [
+            "title" => 'title',
+            "description" => 'description',
+            "keywords" => 'keywords',
+            "news_keywords" => 'news_keywords',
+            "og:title" => 'og:title',
+            "og:description" => 'og:description',
+            "og:image" => 'og:image',
+        ],
+        "Video" => [
+            "title" => 'title',
+            "description" => 'description',
+            "keywords" => 'keywords',
+            "news_keywords" => 'news_keywords',
+            "og:title" => 'og:title',
+            "og:description" => 'og:description',
+            "og:image" => 'og:image',
+        ],
+        "Tags" => [
+            "title" => '%s: Tin tức, Video, hình ảnh %s ',
+            "description" => 'Tin tức mới nhất, video clip và hình ảnh về %s',
+            "keywords" => '%s, tin tức %s, video %s, hình ảnh %s',
+            "news_keywords" => '%s, tin tức %s, video %s, hình ảnh %s,',
+            "og:description" => 'Tin tức mới nhất, video clip và hình ảnh về %s',
+            "og:image" => '',
+        ],
+        "Thread" => [
+            "title" => '%s: Tin tức, Video, hình ảnh %s ',
+            "description" => 'Tin tức mới nhất, video clip và hình ảnh về %s',
+            "keywords" => '%s, tin tức %s, video %s, hình ảnh %s',
+            "news_keywords" => '%s, tin tức %s, video %s, hình ảnh %s,',
+            "og:description" => 'Tin tức mới nhất, video clip và hình ảnh về %s',
+            "og:image" => '',
+        ],
+        "Topic" => [
+            "title" => '%s: Tin tức, Video, hình ảnh %s ',
+            "description" => 'Tin tức mới nhất, video clip và hình ảnh về %s',
+            "keywords" => '%s, tin tức %s, video %s, hình ảnh %s',
+            "news_keywords" => '%s, tin tức %s, video %s, hình ảnh %s,',
+            "og:description" => 'Tin tức mới nhất, video clip và hình ảnh về %s',
+            "og:image" => '',
+        ],
+        "Brand" => [
+            "title" => '%s: Tin tức, Video, hình ảnh %s ',
+            "description" => 'Tin tức mới nhất, video clip và hình ảnh về %s',
+            "keywords" => '%s, tin tức %s, video %s, hình ảnh %s',
+            "news_keywords" => '%s, tin tức %s, video %s, hình ảnh %s,',
+            "og:description" => 'Tin tức mới nhất, video clip và hình ảnh về %s',
+            "og:image" => '',
+        ],
+    ];

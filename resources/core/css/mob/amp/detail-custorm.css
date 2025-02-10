@@ -1,0 +1,62 @@
+
+.AudioSwitchVoice{
+    z-index: 9;
+}
+[data-role=content] .VCSortableInPreviewMode[type=block-quote-info][data-layout=right-center] .quote-content::before {
+    left: unset;
+    right: 0;
+}
+.VCSortableInPreviewMode[type=block-quote-info][data-layout=right-center] .quote-content::before {
+    transform: scaleX(-1);
+}
+[data-role=content] .VCSortableInPreviewMode .AudioCMS_Caption, [data-role=content] .VCSortableInPreviewMode .PhotoCMS_Caption{
+    text-align: left;
+}
+.flex-author .right .item:hover svg circle{
+    fill: white;
+}
+.flex-author .right  .item:hover svg path{
+    fill: rgba(54, 157, 221, 1);
+}
+.sticky_header-detail .middle-flex .item_share:hover svg path,
+.sticky_header-detail .middle-flex .btnSaveNews:hover svg path,
+.sticky_header-detail .middle-flex .scoll-comment:hover svg path
+{
+    fill: rgba(54, 157, 221, 1);
+}
+
+.detail__network-box .network-flex .right .item:hover svg path{
+    fill: rgba(54, 157, 221, 1);
+}
+.detail__network-box .network-flex .right .item:hover svg circle{
+    fill: white;
+}
+.detail__network-box .network-flex .right .item:hover[rel="facebook"] svg circle{
+    fill: rgba(54, 157, 221, 1);
+}
+.detail__network-box .network-flex .right .item:hover[rel="facebook"] svg path{
+    fill: white;
+}
+
+.flex-author .right .item:hover[rel="facebook"] svg circle{
+    fill: rgba(54, 157, 221, 1);
+}
+.flex-author .right .item:hover[rel="facebook"] svg path{
+    fill: white;
+}
+.detail__network-box {
+    clear: both;
+}
+.open-menu2 .header__menu{
+    z-index: 9999;
+}
+
+.ml-5{
+    margin-left: 5px;
+}
+.strike{
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: 600;
+    color: var(--neutral-80, #8c8c8c);
+}

@@ -1,0 +1,221 @@
+.fblw-timeline-item {
+    background: #fff;
+    /* border: 1px solid #e1e1e1; */
+}
+.fblwtia-mask {
+    background: #f9f9f9;
+    position: absolute;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 10px;
+}
+
+
+.fblwtia-title-line {
+    right: 0;
+    left: 36%;
+    top: 0;
+    height: 20px;
+    width: 3%;
+}
+
+.fblwtia-front-mask {
+    height: 10px;
+    left: 36%;
+    width: 3%;
+}
+
+.fblwtia-title-mask-1 {
+    top: 30px;
+}
+
+.fblwtia-front-mask-2 {
+    top: 70px;
+    height: 15px;
+}
+
+.fblwtia-front-mask-3 {
+    top: 105px;
+}
+
+.fblwtia-front-mask-4 {
+    top: 125px;
+}
+
+.fblwtia-sepline-sapo {
+    left: 36%;
+    right: 0;
+
+}
+
+.fblwtia-sepline-sapo-0 {
+    top: 20px;
+}
+
+.fblwtia-sepline-sapo-1 {
+    top: 50px;
+    height: 20px;
+}
+
+.fblwtia-sepline-sapo-2 {
+    top: 85px;
+    height: 20px;
+}
+
+.fblwtia-sepline-sapo-3 {
+    top: 115px;
+}
+
+.fblwtia-sepline-sapo-4 {
+    top: 135px;
+    height: 50px;
+}
+
+.fblwtia-sapo-line {
+    right: 0;
+
+}
+
+
+.fblwtia-sapo-line-2 {
+    top: 70px;
+    left:55%;
+    height: 15px;
+}
+
+.fblwtia-sapo-line-3 {
+    top: 105px;
+    left: 95%;
+}
+
+.fblwtia-sapo-line-4 {
+    top: 125px;
+    left: 85%;
+    height: 10px;
+}
+
+.fblwti-animated {
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 200px;
+    height: 110px;
+    position: relative;
+}
+
+
+@-webkit-keyframes placeHolderShimmer {
+    0% {
+        background-position: -800px 0
+    }
+    100% {
+        background-position: 800px 0
+    }
+}
+
+/* Custom HNG */
+
+.fblwti-animated {
+    height: 185px;
+}
+.btnviewmore:hover {
+    background: #a01e21;
+}
+.btnviewmore {
+    width: 140px;
+    height: 40px;
+    background: #393939;
+    font-family: SFD-Bold;
+    font-size: 18px;
+    line-height: 40px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 25px;
+    text-align: center;
+}
+.fblwtia-sapo-line-0 {
+    top: 0;
+    left: 98%;
+    height: 20px;
+}
+
+.fblwtia-sapo-line-1 {
+    top: 30px;
+    left: 85%;
+    height: 20px;
+}
+.fb-loading-wrapper{ padding: 25px 0;}
+/*Loading 2*/
+.layout__loading_item{
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 40px;
+    display: flex;
+}
+
+
+.layout__loading_item>div {
+    width: calc(32.72% - 20px);
+}
+.layout__loading_item.layout__loading_item1>div {
+    width: calc(100% - 20px);
+}
+.layout__loading_item.layout__loading_item2>div {
+    width: calc(50% - 8px);
+}
+.layout__loading_item.layout__loading_item1>div {
+    width: 100%;
+}
+.layout__loading_item.layout__loading_item4{
+    gap: 24px;
+}
+.layout__loading_item.layout__loading_item3{
+    gap: 24px;
+}
+.layout__loading_item.layout__loading_item3{
+    gap: 24px;
+}
+.layout__loading_item.layout__loading_item2{
+    gap: 16px;
+}
+.layout__loading_item.layout__loading_item4>div {
+    width: calc(25% - 18px);
+}
+.layout__loading_item.layout__loading_item3>div {
+    width: calc(33.33% - 18px);
+}
+
+
+.layout__loading_item .news-image-load {
+    height: 188px !important;
+}
+.loading__animation {
+    animation-duration: 1.5s !important;
+    animation-fill-mode: forwards !important;
+    animation-iteration-count: infinite !important;
+    animation-name: placeHolderShimmer !important;
+    animation-timing-function: linear !important;
+    background: #f6f7f8;
+    background: linear-gradient(to right,#eee 8%,#ddd 18%,#eee 33%);
+    background-size: 800px 200px !important;
+    position: relative;
+}
+.layout__loading_item .box-stream-content {
+    margin-top: 16px;
+}
+.layout__loading_item .news-title-load {
+    margin-bottom: 16px;
+    height: 15px;
+    width: 30%;
+}
+.layout__loading_item .news-sapo-load {
+    height: 15px;
+    margin-top: 10px;
+}

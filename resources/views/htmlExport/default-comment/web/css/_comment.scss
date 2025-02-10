@@ -1,0 +1,282 @@
+/**thêm class  .blNoLogin  cùng div .detail__comment dùng khi không cần đăng nhập*/
+
+
+$font-family: "Inter";
+$font-merriweather: "Merriweather";
+$color-site: #0098d1;
+$font-size-content: 17px;
+$line-height: 24px;
+$color-text-comment: #000;
+$font-weight: 600;
+
+// config các box input
+$border-input: 1px solid #ebebeb;
+$height-input: 40px;
+$border-radius-input: 4px;
+$background-input: #fafafa;
+$color-input: #8b8b8b;
+$line-height-input: 26px;
+$font-style-input: normal;
+$font-weight-input: 400;
+$font-size-input: 15px;
+
+
+
+
+
+.detail__comment {
+    .box-comment {
+        width: 100%;
+        .text {
+            font-family: $font-merriweather;
+            font-style: normal;
+            font-weight: $font-weight;
+            font-size: $font-size-content;
+            line-height: $line-height;
+            color: $color-text-comment;
+            margin-bottom: 14px;
+        }
+        .btn-comment {
+            background: $background-input;
+            border: $border-input;
+            border-radius: 4px;
+            width: 100%;
+            height: 120px;
+            resize: none;
+            padding: 7px 8px;
+            font-family: $font-family;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 26px;
+            color: $color-input;
+            margin-bottom: 14px;
+        }
+        .box-bottom {
+            text-align: right;
+            .btn-submit {
+                display: inline-block;
+                background: #0098D1;
+                border-radius: 4px;
+                padding: 6px 24px;
+                font-family: $font-family;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 20px;
+                color: #FFFFFF;
+            }
+        }
+    }
+    .list-comment {
+        padding-top: 24px;
+        margin-top: 24px;
+        border-top: $border-input;
+        .item {
+            margin-bottom: 16px;
+            display: flex;
+            .avatar {
+                display: block;
+                width: 40px;
+                height: 40px;
+                margin-right: 13px;
+                border-radius: 50%;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .item-content {
+                width: calc(100% - 53px);
+                .user-name {
+                    font-family: $font-family;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: $color-text-comment;
+                    display: block;
+                    margin-bottom: 4px;
+                }
+                .text-comment {
+                    font-family: $font-family;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 22px;
+                    color: $color-text-comment;
+                    margin-bottom: 16px;
+                }
+                .item-bottom {
+                    font-family: $font-family;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 13px;
+                    line-height: 16px;
+                    color: $color-input;
+                    display: flex;
+                    align-items: center;
+                    .item-ls {
+                        display: block;
+                        margin-right: 24px;
+                        margin-bottom: 0;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+            .box-reply {
+                border-left: $border-input;
+                padding-left: 16px;
+                margin-top: 16px;
+                .item-reply {
+                    display: flex;
+                    margin-bottom: 16px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    .item-bottom{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .view-more {
+        background: #FAFAFC;
+        border: $border-input;
+        border-radius: 4px;
+        display: block !important;
+        padding: 10px;
+        text-align: center;
+        font-family: $font-family;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-input;
+    }
+    .view-more.hidden{
+        display: none!important;
+    }
+
+
+}
+.blNoLogin {
+    .input-info {
+        input {
+            width: calc(100%);
+            height: $height-input;
+            background: $background-input;
+            border: $border-input;
+            border-radius: $border-radius-input;
+            font-family: $font-family;
+            font-style: $font-style-input;
+            font-weight: $font-weight-input;
+            font-size:  $font-size-input;
+            line-height: $line-height-input;
+            color: $color-input;
+            padding: 0 8px;
+        }
+    }
+    .box-comment {
+        .input-info {
+            display: grid;
+            column-gap: 20px;
+            justify-content: space-between;
+            grid-template-columns: calc(50% - 10px) calc(50% - 10px);
+            margin-bottom: 20px;
+        }
+        &:has(.inval) {
+            .input-info {
+                margin-bottom: 26px;
+            }
+        }
+    }
+    .inval {
+        .require {
+            border: 1px solid #9F224E;
+        }
+        position: relative;
+    }
+    .inval.t-content {
+        &:after {
+            content: "Bạn chưa nhập nội dung bình luận.";
+            content: "Bạn chưa nhập nội dung bình luận.";
+            display: block;
+            display: block;
+            width: 100%;
+            width: 100%;
+            font: 400 13px/15px arial;
+            font: 400 13px/15px arial;
+            color: #9F224E;
+            color: #9F224E;
+            bottom: 10px;
+            bottom: 10px;
+            left: 0;
+            left: 0;
+            position: absolute;
+            position: absolute;
+        }
+        padding-bottom: 15px;
+    }
+    .inval.umail {
+        &:after {
+            content: "Hãy nhập email";
+            font: 400 13px/15px arial;
+            color: #9F224E;
+            display: block;
+            margin-top: 4px;
+        }
+    }
+    .inval.uname {
+        &:after {
+            content: "Hãy nhập họ và tên";
+            font: 400 13px/15px arial;
+            color: #9F224E;
+            margin-top: 4px;
+        }
+    }
+    .erroMail {
+        &:after {
+            content: "Email bạn nhập không hợp lệ";
+            font: 400 13px/15px arial;
+            color: #9F224E;
+            display: block;
+            margin-top: 4px;
+        }
+    }
+}
+.box-comment {
+    .input-info {
+        display: none;
+    }
+}
+#commentNologin {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #858585;
+    cursor: pointer;
+}
+@media (max-width: 767px) {
+    .blNoLogin {
+        .box-comment {
+            .input-info {
+                grid-template-columns: calc(100%);
+                row-gap: 10px;
+                margin-bottom: unset;
+            }
+            &:has(.inval) {
+                .input-info {
+                    margin-bottom: -10px;
+                }
+            }
+        }
+    }
+}

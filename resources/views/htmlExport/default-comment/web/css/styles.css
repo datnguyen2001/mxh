@@ -1,0 +1,300 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://static.mediacdn.vn/fonts/Roboto-Regular.woff2") format("woff2"), url("https://static.mediacdn.vn/fonts/Roboto-Regular.woff") format("woff"), url("https://static.mediacdn.vn/fonts/Roboto-Regular.ttf") format("truetype"), url("https://static.mediacdn.vn/fonts/Roboto-Regular.eot") format("embedded-opentype");
+  font-display: swap; }
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: url("https://static.mediacdn.vn/fonts/Roboto-Medium.woff2") format("woff2"), url("https://static.mediacdn.vn/fonts/Roboto-Medium.woff") format("woff"), url("https://static.mediacdn.vn/fonts/Roboto-Medium.ttf") format("truetype"), url("https://static.mediacdn.vn/fonts/Roboto-Medium.eot") format("embedded-opentype");
+  font-display: swap; }
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://static.mediacdn.vn/fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("https://static.mediacdn.vn/fonts/RobotoCondensed-Bold.woff") format("woff"), url("https://static.mediacdn.vn/fonts/RobotoCondensed-Bold.ttf") format("truetype"), url("https://static.mediacdn.vn/fonts/RobotoCondensed-Bold.eot") format("embedded-opentype");
+  font-display: swap; }
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://static.mediacdn.vn/fonts/Roboto-Bold.woff2") format("woff2"), url("https://static.mediacdn.vn/fonts/Roboto-Bold.woff") format("woff"), url("https://static.mediacdn.vn/fonts/Roboto-Bold.ttf") format("truetype"), url("https://static.mediacdn.vn/fonts/Roboto-Bold.eot") format("embedded-opentype");
+  font-display: swap; }
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: bold;
+  src: url("https://static.mediacdn.vn/fonts/Roboto-Bold.woff2") format("woff2"), url("https://static.mediacdn.vn/fonts/Roboto-Bold.woff") format("woff"), url("https://static.mediacdn.vn/fonts/Roboto-Bold.ttf") format("truetype"), url("https://static.mediacdn.vn/fonts/Roboto-Bold.eot") format("embedded-opentype");
+  font-display: swap; }
+@font-face {
+  font-family: "Merriweather";
+  font-weight: normal;
+  font-style: normal;
+  src: url("https://static.mediacdn.vn/fonts/Merriweather-Regular.woff2") format("woff2"), url("https://static.mediacdn.vn/fonts/Merriweather-Regular.woff") format("woff"), url("https://static.mediacdn.vn/fonts/Merriweather-Regular.ttf") format("truetype"), url("https://static.mediacdn.vn/fonts/Merriweather-Regular.eot") format("embedded-opentype");
+  font-display: swap; }
+@font-face {
+  font-family: "Merriweather";
+  font-weight: bold;
+  font-style: normal;
+  src: url("https://static.mediacdn.vn/fonts/Merriweather-Bold.woff2") format("woff2"), url("https://static.mediacdn.vn/fonts/Merriweather-Bold.woff") format("woff"), url("https://static.mediacdn.vn/fonts/Merriweather-Bold.ttf") format("truetype"), url("https://static.mediacdn.vn/fonts/Merriweather-Bold.eot") format("embedded-opentype");
+  font-display: swap; }
+@font-face {
+  font-family: "Merriweather";
+  font-weight: 900;
+  font-style: normal;
+  src: url("https://static.mediacdn.vn/fonts/Merriweather-Black.woff2") format("woff2"), url("https://static.mediacdn.vn/fonts/Merriweather-Black.woff") format("woff"), url("https://static.mediacdn.vn/fonts/Merriweather-Black.ttf") format("truetype"), url("https://static.mediacdn.vn/fonts/Merriweather-Black.eot") format("embedded-opentype");
+  font-display: swap; }
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://static.mediacdn.vn/fonts/Inter-Regular.woff2") format("woff2"), url("https://static.mediacdn.vn/fonts/Inter-Regular.woff") format("woff"), url("https://static.mediacdn.vn/fonts/Inter-Regular.ttf") format("truetype"), url("https://static.mediacdn.vn/fonts/Inter-Regular.eot") format("embedded-opentype");
+  font-display: swap; }
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  src: url("https://static.mediacdn.vn/fonts/Inter-Medium.woff2") format("woff2"), url("https://static.mediacdn.vn/fonts/Inter-Medium.woff") format("woff"), url("https://static.mediacdn.vn/fonts/Inter-Medium.ttf") format("truetype"), url("https://static.mediacdn.vn/fonts/Inter-Medium.eot") format("embedded-opentype");
+  font-display: swap; }
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://static.mediacdn.vn/fonts/Inter-SemiBold.woff2") format("woff2"), url("https://static.mediacdn.vn/fonts/Inter-SemiBold.woff") format("woff"), url("https://static.mediacdn.vn/fonts/Inter-SemiBold.ttf") format("truetype"), url("https://static.mediacdn.vn/fonts/Inter-SemiBold.eot") format("embedded-opentype");
+  font-display: swap; }
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://static.mediacdn.vn/fonts/Inter-Bold.woff2") format("woff2"), url("https://static.mediacdn.vn/fonts/Inter-Bold.woff") format("woff"), url("https://static.mediacdn.vn/fonts/Inter-Bold.ttf") format("truetype"), url("https://static.mediacdn.vn/fonts/Inter-Bold.eot") format("embedded-opentype");
+  font-display: swap; }
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  src: url("https://static.mediacdn.vn/fonts/Inter-Black.woff2") format("woff2"), url("https://static.mediacdn.vn/fonts/Inter-Black.woff") format("woff"), url("https://static.mediacdn.vn/fonts/Inter-Black.ttf") format("truetype"), url("https://static.mediacdn.vn/fonts/Inter-Black.eot") format("embedded-opentype");
+  font-display: swap; }
+
+body {
+  font-family: 'Inter';
+  color: #454545;
+  font-size: 14px;
+  line-height: 150%;
+  background-color: #fff;
+  -webkit-animation-duration: .1s;
+  -webkit-animation-name: fontfix;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: .1s;
+  -webkit-tap-highlight-color: transparent;
+  margin: 0;
+  min-width: 1232px; }
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  max-width: 100%;
+  width: 1232px; }
+
+.icon {
+  display: inline-flex; }
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none; }
+
+*, ::after, ::before {
+  box-sizing: border-box; }
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: #666666;
+  outline: none; }
+  a:hover {
+    text-decoration: none; }
+
+p {
+  margin: 0; }
+
+h1, h2, h3 {
+  margin: 0; }
+
+img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  color: transparent; }
+
+input, textarea, select, a {
+  outline: none; }
+
+.p-0 {
+  padding: 0 !important; }
+
+.d-none {
+  display: none !important; }
+
+.d-block {
+  display: block !important; }
+
+.d-flex {
+  display: flex; }
+
+.w730 {
+  width: 730px;
+  margin: 0 auto; }
+
+.w1120 {
+  width: 1120px;
+  margin: 0 auto; }
+
+.w1062 {
+  width: 1062px;
+  margin: 0 auto; }
+
+.w823 {
+  width: 823px;
+  margin: 0 auto; }
+
+.m-0 {
+  margin: 0; }
+
+.mt-5 {
+  margin-top: 5px; }
+
+.mt-10 {
+  margin-top: 10px; }
+
+.mt-15 {
+  margin-top: 15px; }
+
+.mb-16 {
+  margin-bottom: 16px; }
+
+.mt-20 {
+  margin-top: 20px; }
+
+.mt-25 {
+  margin-top: 25px; }
+
+.mt-30 {
+  margin-top: 30px; }
+
+.mb-5 {
+  margin-bottom: 5px; }
+
+.mb-10 {
+  margin-bottom: 10px; }
+
+.mb-15 {
+  margin-bottom: 15px; }
+
+.mb-20 {
+  margin-bottom: 20px; }
+
+.mb-25 {
+  margin-bottom: 25px; }
+
+.mb-30 {
+  margin-bottom: 30px; }
+
+.img-circle {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: block; }
+
+.border-0 {
+  border: 0 !important; }
+
+.clearfix {
+  clear: both; }
+
+.show-pc {
+  display: block; }
+  @media (max-width: 767px) {
+    .show-pc {
+      display: none; } }
+
+.show-mb {
+  display: none; }
+  @media (max-width: 767px) {
+    .show-mb {
+      display: block; } }
+
+.hidden {
+  display: none !important; }
+
+.text-center {
+  text-align: center; }
+
+.img-resize {
+  display: block;
+  position: relative;
+  height: max-content; }
+  .img-resize:before {
+    padding-bottom: 62.5%;
+    /* 16:10 */
+    content: "";
+    display: block; }
+  .img-resize .box-category-avatar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover; }
+
+.img-square {
+  display: block;
+  position: relative;
+  height: max-content; }
+  .img-square:before {
+    padding-bottom: 133.33%;
+    /* 3:4 */
+    content: "";
+    display: block; }
+  .img-square .box-category-avatar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover; }
+
+.iframe-resize {
+  display: block;
+  position: relative;
+  height: max-content; }
+  .iframe-resize:before {
+    padding-bottom: 56.25%;
+    content: "";
+    display: block; }
+  .iframe-resize .iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }

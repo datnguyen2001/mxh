@@ -1,0 +1,295 @@
+.bg-cover {
+    display: none;
+}
+
+.videobg-content {
+    position: relative;
+}
+
+.layer-4 {
+    position: absolute;
+    -webkit-background-size: 100% !important;
+    background-size: 100% !important;
+}
+
+.layer-4 {
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+.videobg-content .VCSortableInPreviewMode[type=VideoStream] {
+    z-index: 1;
+    margin-top: 0;
+}
+
+.videobg-content .VCSortableInPreviewMode[type=VideoStream] .videoNewsPlayer {
+    padding-top: 65.25% !important;
+    background-color: transparent !important;
+}
+
+
+.container-magazine {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.container-magazine .detail-content {
+    background: transparent;
+    padding: 48px 150px 100px;
+}
+.magazine {
+    overflow-x: hidden; }
+
+
+.VCSortableInPreviewMode .PhotoCMS_Caption{
+    padding: 10px 0;
+}
+.magazine [data-role="content"] .VCSortableInPreviewMode.alignJustifyFull {
+    width: 100vw !important;
+    position: relative;
+    margin-left: calc(-50vw + 8px);
+    left: 50%;
+    max-width: calc(100vw - 16px);
+}
+.magazine [data-role="content"] .VCSortableInPreviewMode.alignJustifyFull img{
+    width: 100%;
+}
+.magazine .VCSortableInPreviewMode[type="360photoemagazine"] {
+    width: 980px !important;
+    margin-left: -160px !important; }
+
+.LayoutAlbumWrapper {
+    width: 100%;
+    display:flex;
+}
+
+.LayoutAlbumWrapper .LayoutAlbumRow {
+    margin-bottom: 4px;
+    float: left;
+    width: 100%;
+}
+
+.LayoutAlbumWrapper .LayoutAlbumRow:last-child {
+    margin: 0;
+}
+
+.LayoutAlbumWrapper .LayoutAlbumItem {
+    display: block;
+    float: left;
+    margin: 0 2px;
+}
+
+.LayoutAlbumWrapper .LayoutAlbumItem:first-child {
+    margin-left: 0;
+}
+
+.LayoutAlbumWrapper .LayoutAlbumItem:last-child {
+    margin-right: 0;
+}
+
+.LayoutAlbumWrapper figure {
+    margin: 0;
+    position: relative;
+    -webkit-backface-visibility: hidden;
+}
+
+.LayoutAlbumWrapper figcaption {
+    background-color: rgba(255,255,255,.75);
+    box-sizing: border-box;
+    font-size: .75rem;
+    padding: .5rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    transition: all .5s ease-in-out;
+    display: none;
+}
+
+.LayoutAlbumItem a {
+    border: 0;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.LayoutAlbumWrapper .LayoutAlbumItem:hover a+figcaption {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.LayoutAlbumWrapper img {
+    display: block;
+    max-width: 100%;
+    transition: all .25s ease-in-out;
+}
+[data-role=content] .VCSortableInPreviewMode .PhotoCMS_Caption, [data-role=content] .VCSortableInPreviewMode .VideoCMS_Caption{
+    padding: 6px 12px;
+}
+.VCSortableInPreviewMode[type=LayoutAlbum] .LayoutAlbumCaptionWrapper{
+    margin: auto;
+}
+.contentOuter .VCSortableInPreviewMode.alignCenterOverflow.LayoutAlbumWrapper{
+    display: flex;
+}
+[data-role="content"] .LayoutAlbumCaption{
+    text-align: left;
+    font-size: 17px;
+    line-height: 27px ;
+    font-family: SFD-Regular;
+}
+
+.magazine .VCSortableInPreviewMode[type=LayoutAlbum] .LayoutAlbumCaptionWrapper,
+.magazine .VCSortableInPreviewMode[type="photo"].alignCenterOverflow .PhotoCMS_Caption {
+    width: 1276px;
+    display: block;
+    margin: auto;
+}
+.magazine [data-role=content] .VCSortableInPreviewMode.alignJustifyFull{
+    left: 50%!important;
+}
+.header.header-em {
+    z-index: 4;
+}
+@media  screen and (max-width: 1024px) {
+    .container {
+        width: 100%;
+    }
+    .videobg-content {
+        display: none;
+    }
+
+    .bg-cover {
+        display: block !important;
+        padding-top: 0px !important;
+    }
+}
+@media (max-width: 991px) {
+    .magazine .VCSortableInPreviewMode[type="360photoemagazine"] {
+        width: 100% !important;
+        margin-left: 0 !important; } }
+.magazine .VCSortableInPreviewMode[type="360photoemagazine"] iframe {
+    width: 980px !important; }
+@media (max-width: 991px) {
+    .magazine .VCSortableInPreviewMode[type="360photoemagazine"] iframe {
+        width: 100% !important; } }
+.magazine .video video {
+    max-width: 100%;
+    height: auto; }
+@media(max-width:991px) {
+    .container-magazine {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+@media(max-width:767px) {
+    .container-magazine .detail-content {
+        background: transparent;
+        padding: 24px 0px 20px;
+    }
+    .container-magazine {
+        padding: 0 16px;
+    }
+    .magazine [data-role="content"] .VCSortableInPreviewMode.alignRightOverflow {
+        float: right;
+        margin-right: -16px;
+        width: 45%;
+        margin-left: 15px !important;
+    }
+    .magazine [data-role="content"] .VCSortableInPreviewMode.alignLeftOverflow {
+        float: left;
+        margin-left: -16px;
+        margin-right: 16px;
+        width: 45%;
+    }
+    [data-role=content]  .VCSortableInPreviewMode[type=photo].alignLeft,
+    [data-role=content] .VCSortableInPreviewMode[type=photo].alignLeftOverflow,
+    [data-role=content] .VCSortableInPreviewMode[type=photo].alignRight,
+    [data-role=content] .VCSortableInPreviewMode[type=photo].alignRightOverflow,
+    [data-role=content] .VCSortableInPreviewMode[type=photo],
+    [data-role=content] .VCSortableInPreviewMode[type=VideoStream],
+    .magazine [data-role="content"] .VCSortableInPreviewMode.alignRightOverflow[type=VideoStream],
+    .magazine [data-role="content"] .VCSortableInPreviewMode.alignLeftOverflow[type=VideoStream]{
+        width: calc(100% + 32px);
+        max-width: calc(100% + 32px) !important;
+        margin-left: -16px !important;
+        float: left;
+    }
+
+    [data-role="content"] .LayoutAlbumWrapper .LayoutAlbumRow{
+        display: block;
+        margin-bottom: 0;
+    }
+
+    .magazine .VCSortableInPreviewMode[type="photo"].alignJustifyFull .PhotoCMS_Caption,
+    .magazine .VCSortableInPreviewMode[type=LayoutAlbum] .LayoutAlbumCaptionWrapper,
+    .magazine .VCSortableInPreviewMode[type="photo"].alignJustifyFull .PhotoCMS_Caption,
+    .magazine .VCSortableInPreviewMode[type="photo"].alignCenterOverflow .PhotoCMS_Caption {
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+
+    .magazine [data-role="content"] .VCSortableInPreviewMode.alignCenterOverflow{
+        width: 100vw;
+        max-width: 100vw;
+        margin-left: -16px;
+    }
+
+    .magazine [data-role="content"] .VCSortableInPreviewMode.alignCenterOverflow[type='insertembedcode'] {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+    }
+    .magazine [data-role="content"] .VCSortableInPreviewMode.alignJustifyFull:not(.LayoutAlbumWrapper){
+        margin-left: 0px;
+        left: 0 !important;
+    }
+    .magazine [data-role="content"] .VCSortableInPreviewMode.table-0[type=BoxTable] {
+        overflow: scroll;
+        width: 100%;
+        max-width: unset;
+        margin-left:unset;
+    }
+    [data-role="content"] .VCSortableInPreviewMode[type=BoxTable]::-webkit-scrollbar{
+        width: 0;
+    }
+    .magazine [data-role="content"] .VCSortableInPreviewMode.alignRightOverflow[type=BoxTable]{
+        margin-right: 0;
+        margin-left: 0 !important;
+    }
+    .magazine [data-role="content"] .VCSortableInPreviewMode.LayoutAlbumWrapper {
+        width: 100vw !important;
+        position: relative;
+        margin-left: calc(-50vw + 16px);
+        max-width: calc(100vw - 20px);
+    }
+    .magazine [data-role=content] .LayoutAlbumWrapper .LayoutAlbumRow{
+        display: flex;
+        margin-bottom: 0.5rem;
+
+    }
+    .magazine [data-role=content] .VCSortableInPreviewMode.LayoutAlbumWrapper ,  .magazine [data-role=content] .widget-box.LayoutAlbumWrapper  {
+        width: 100%;
+        max-width: calc(100vw - 20px);
+        margin-left: 0;
+        left: 0 !important;
+    }
+    .magazine [data-role="content"] .LayoutAlbumWrapper .LayoutAlbumItem{
+        margin-right: 0;
+    }
+    .magazine [data-role="content"] .VCSortableInPreviewMode.alignJustifyFull{
+        max-width: calc(100vw - 32px);
+    }
+    .magazine [data-role=content] .VCSortableInPreviewMode .PhotoCMS_Caption,.magazine [data-role=content] .VCSortableInPreviewMode .VideoCMS_Caption{
+        padding: 6px 12px;
+    }
+}

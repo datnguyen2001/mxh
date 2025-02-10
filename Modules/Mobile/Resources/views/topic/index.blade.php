@@ -1,0 +1,25 @@
+@extends('mobile::layout.master')
+@section('title'){{!empty($topicInfo->MetaTitle)?$topicInfo->MetaTitle:sprintf(config('metapage.Topic.title'),$topicInfo->TopicName??'',$topicInfo->TopicName??'')}}@endsection
+@section('og-title'){{!empty($topicInfo->MetaTitle)?$topicInfo->MetaTitle:sprintf(config('metapage.Topic.title'),$topicInfo->TopicName??'',$topicInfo->TopicName??'')}}@endsection
+@section('description'){{!empty($topicInfo->MetaDescription)?$topicInfo->MetaDescription:sprintf(config('metapage.Topic.description'),(!empty($topicInfo->Description)?$topicInfo->Description:$topicInfo->TopicName??''))}}@endsection
+@section('og-description'){{!empty($topicInfo->MetaDescription)?$topicInfo->MetaDescription:sprintf(config('metapage.Topic.description'),(!empty($topicInfo->Description)?$topicInfo->Description:$topicInfo->TopicName??''))}}@endsection
+@section('keywords'){{!empty($topicInfo->MetaKeyword)?$topicInfo->MetaKeyword:sprintf(config('metapage.Topic.keywords'),$topicInfo->TopicName??'',$topicInfo->TopicName??'',$topicInfo->TopicName??'',$topicInfo->TopicName??'')}}@endsection
+@section('news_keywords'){{(!empty($topicInfo->MetaKeyword))?$topicInfo->MetaKeyword:sprintf(config('metapage.Topic.keywords'),$topicInfo->TopicName??'',$topicInfo->TopicName??'',$topicInfo->TopicName??'',$topicInfo->TopicName??'')}}@endsection
+@section('OgUrl'){{config('siteInfo.site_path').Request::getPathInfo()}}@endsection
+@if(!empty($topicInfo->Logo))
+@section('OgImage'){{(!empty($topicInfo->Logo))?UserInterfaceHelper::formatThumbZoom($topicInfo->Logo,600,315):config('siteInfo.default_share')}}@endsection
+@else
+@section('OgImage'){{(!empty($topicInfo->Cover))?UserInterfaceHelper::formatThumbZoom($topicInfo->Cover,600,315):config('siteInfo.default_share')}}@endsection
+@endif
+@section('css')
+    @include('mobile::expert.Css-list')
+    @if(!empty($topicInfo))
+        @include('schema.SchemaTopic')
+    @endif
+@endsection
+@section('js')
+    @include('mobile::expert.Js-list')
+@endsection
+@section('content')
+
+@endsection

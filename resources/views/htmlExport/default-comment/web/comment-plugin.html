@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comment</title>
+</head>
+<body>
+<div class="container">
+    <!--
+		Nhúng link css, js lên trang cần hiển thị box Bình luận. (Bỏ qua file jquery.min.js nếu trên trang đã có sẵn jquery)
+
+		Trong div detail_comment các tham số tương ứng gồm
+		- sitename: Tên trang cần nhúng bình luận (VCC cấp)
+		- domain-comment: domain API, trong đó
+			dev: https://php53.cnnd.vn
+			prod: https://util8.cnnd.vn
+		- news-object-type: Gồm hai giá trị, trong đó
+			1: dành cho tin
+			2: dành cho video
+		- news-id: ID của tin hoặc video
+		- news-sapo: Sapo của tin hoặc video
+		- news-title: Tiêu đề của tin hoặc video
+		- news-url: Url đầy đủ của tin hoặc video
+		- news-zone-id: ID chuyên mục chính của tin hoặc video
+		- news-avatar: Link ảnh avatar của tin hoặc video
+		- news-distribution-date: Ngày xuất bản của tin hoặc video, format: yyyy-MM-ddTHH:mm:ss
+	-->
+    <link rel="stylesheet" href="https://static.mediacdn.vn/cnnd.vn/web_css/comment.min.css">
+    <script src="https://static.mediacdn.vn/cnnd.vn/web_js/jquery.min.js"></script>
+    <script src="https://static.mediacdn.vn/cnnd.vn/web_js/jquery.timeago.js"></script>
+    <script src="https://static.mediacdn.vn/cnnd.vn/web_js/comment.min.js"></script>
+    <div  id="detail_comment"
+          data-sitename="vnportal"
+          data-domain-comment="https://php53.cnnd.vn"
+          data-news-object-type="1"
+          data-news-id="4240523144440909"
+          data-news-sapo="sapo demo"
+          data-news-title="title demo"
+          data-news-url="https://demo.cnnd.vn/title-demo-4240523144440909.htm"
+          data-news-zone-id="4551"
+          data-news-avatar="https://static.cnnd.vn/avatar.png"
+          data-news-distribution-date="2024-05-23T12:48:40">
+    </div>
+</div>
+
+</body>
+</html>

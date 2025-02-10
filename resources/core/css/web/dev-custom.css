@@ -1,0 +1,13 @@
+/*Css detail*/
+[data-role="content"] .VCSortableInPreviewMode[type="PhotoInContentBox"] .PhotoCMS_Caption{
+    display: block;
+}
+.magazine [data-role="content"] .VCSortableInPreviewMode[type="photo-grid-album"][data-layout^="col"].alignJustifyFull {
+    height: calc(100vw - 120px);
+}
+.magazine  .VCSortableInPreviewMode[type="photo-grid-album"][data-layout="row-11"] {
+    height: 660px;
+}
+[data-role=content] img {
+    height: auto;
+}
