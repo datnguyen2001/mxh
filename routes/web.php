@@ -25,9 +25,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/a', function () {
-    return view('home.index3');
-});
 
 Route::get('/404.htm', function () {
     return abort(404);

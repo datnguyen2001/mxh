@@ -1,7 +1,7 @@
 <div class="footer__new">
     <div class="page__content footer__content">
         <div class="footer-col-1">
-            <img src="{{asset('image/logo.png')}}" alt="" class="icon-logo-footer">
+            <img src="<?php echo e(asset('image/logo.png')); ?>" alt="" class="icon-logo-footer">
            <p class="text-footer">Đơn vị chủ quản: <span class="text-footer-outstanding">Đất Việt Media Corp</span></p>
             <p class="text-footer">Giấy phép số 38/GP-STTTT do Sở TTTT TP.HCM cấp ngày 20/5/2021</p>
             <p class="text-footer"><span class="text-footer-outstanding fw-mobile-500">Chịu trách nhiệm nội dung:</span> Ông Đào Văn Khảo</p>
@@ -21,19 +21,19 @@
             <p class="text-footer text-footer-hidden"><span class="text-footer-outstanding">Liên hệ với chúng tôi</span></p>
             <div class="line-footer-contact">
                 <a href="#" class="item-contact-footer">
-                    <img src="{{asset('image/icon-fb.png')}}" alt="">
+                    <img src="<?php echo e(asset('image/icon-fb.png')); ?>" alt="">
                 </a>
                 <a href="#" class="item-contact-footer">
-                    <img src="{{asset('image/icon-x.png')}}" alt="">
+                    <img src="<?php echo e(asset('image/icon-x.png')); ?>" alt="">
                 </a>
                 <a href="#" class="item-contact-footer">
-                    <img src="{{asset('image/icon-zalo.png')}}" alt="">
+                    <img src="<?php echo e(asset('image/icon-zalo.png')); ?>" alt="">
                 </a>
                 <a href="#" class="item-contact-footer">
-                    <img src="{{asset('image/icon-in.png')}}" alt="">
+                    <img src="<?php echo e(asset('image/icon-in.png')); ?>" alt="">
                 </a>
                 <a href="#" class="item-contact-footer">
-                    <img src="{{asset('image/icon-mail.png')}}" alt="">
+                    <img src="<?php echo e(asset('image/icon-mail.png')); ?>" alt="">
                 </a>
             </div>
         </div>
@@ -42,3 +42,4 @@
 <div class="page__content line-copyright">
     Copyright @ 2023 by cungcau.vn
 </div>
+<?php /**PATH D:\laragon\www\mxh-v2-main\resources\views/layout/footer2.blade.php ENDPATH**/ ?>

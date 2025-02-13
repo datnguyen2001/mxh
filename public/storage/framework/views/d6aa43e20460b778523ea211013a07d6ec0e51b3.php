@@ -1,14 +1,13 @@
-@extends('layout.master')
-@section('css')
+<?php $__env->startSection('css'); ?>
 
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
     <div class="box-page page__content">
-        @include('components.template.page-left')
+        <?php echo $__env->make('components.template.page-left', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <div class="box-page-center">
 
-            {{--box chứng khoán--}}
+            
             <div class="box-market">
                 <div class="swiper mySwiperMarket">
                     <div class="swiper-wrapper swiper-wrapper-market">
@@ -17,16 +16,16 @@
                 </div>
                 <div class="box-next-prev-market">
                     <div class="swiper-market-button-prev">
-                        <img src="{{asset('image/icon-left-market.png')}}" loading="lazy" alt="">
+                        <img src="<?php echo e(asset('image/icon-left-market.png')); ?>" loading="lazy" alt="">
                     </div>
                     <div class="swiper-market-button-next">
-                        <img src="{{asset('image/icon-right-market.png')}}" loading="lazy" alt="">
+                        <img src="<?php echo e(asset('image/icon-right-market.png')); ?>" loading="lazy" alt="">
                     </div>
                 </div>
             </div>
 
             <div class="box-content-page-home-center">
-                {{--box create post--}}
+                
                 <div class="box-create-post">
                     <div class="line-header-create-post">
                         <div class="line-header-create-post-info">
@@ -43,20 +42,20 @@
                         <textarea placeholder="Bạn muốn chia sẻ điều gì?" class="textarea-post"></textarea>
                         <div class="actions">
                             <div class="line-actions">
-                                <img src="{{asset('image/video-post.png')}}" loading="lazy" alt="" class="icon-actions">
-                                <img src="{{asset('image/img-post.png')}}" loading="lazy" alt="" class="icon-actions">
+                                <img src="<?php echo e(asset('image/video-post.png')); ?>" loading="lazy" alt="" class="icon-actions">
+                                <img src="<?php echo e(asset('image/img-post.png')); ?>" loading="lazy" alt="" class="icon-actions">
                             </div>
                             <button class="btn-create-post" onclick="submitPost()"><img
-                                    src="{{asset('image/icon-send.png')}}" loading="lazy" alt="">Đăng
+                                    src="<?php echo e(asset('image/icon-send.png')); ?>" loading="lazy" alt="">Đăng
                             </button>
                         </div>
                     </div>
                 </div>
 
-                {{--row post--}}
-               @include('components.template.item-post')
+                
+               <?php echo $__env->make('components.template.item-post', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-                {{--slide post--}}
+                
                 <div class="box-post-full">
                     <div class="box-item-post">
                         <div class="item-post-header">
@@ -67,7 +66,7 @@
                                 <div class="box-infor-user-post">
                                     <div class="line-name-user-post">
                                         <span class="name-user-post">Ngọc châu</span>
-                                        <img src="{{asset('image/icon-tick.png')}}" loading="lazy" alt="" class="icon-tick-xanh">
+                                        <img src="<?php echo e(asset('image/icon-tick.png')); ?>" loading="lazy" alt="" class="icon-tick-xanh">
                                     </div>
                                     <div class="line-bottom-header-post">
                                         <span class="title-date-header-post">21/08/2023</span><span
@@ -76,8 +75,8 @@
                                 </div>
                             </div>
                             <div class="item-post-header-right">
-                                <img src="{{asset('image/icon-star.png')}}" loading="lazy" alt="" class="icon-star-post">
-                                <img src="{{asset('image/icon-more.png')}}" loading="lazy" alt="" class="icon-more-post">
+                                <img src="<?php echo e(asset('image/icon-star.png')); ?>" loading="lazy" alt="" class="icon-star-post">
+                                <img src="<?php echo e(asset('image/icon-more.png')); ?>" loading="lazy" alt="" class="icon-more-post">
                             </div>
                         </div>
                         <div class="item-post-content">
@@ -201,21 +200,21 @@
                             <div class="line-bottom-content-post">
                                 <div class="line-bottom-content-post-left">
                                     <div class="item-icon-function-post">
-                                        <img src="{{asset('image/icon-tim.png')}}" loading="lazy" alt="" class="item-icon-bottom-post">
+                                        <img src="<?php echo e(asset('image/icon-tim.png')); ?>" loading="lazy" alt="" class="item-icon-bottom-post">
                                         <span class="title-icon-function-post">20</span>
                                     </div>
                                     <div class="item-icon-function-post">
-                                        <img src="{{asset('image/icon-bl.png')}}" loading="lazy" alt="" class="item-icon-bottom-post">
+                                        <img src="<?php echo e(asset('image/icon-bl.png')); ?>" loading="lazy" alt="" class="item-icon-bottom-post">
                                         <span class="title-icon-function-post">12</span>
                                     </div>
                                     <div class="item-icon-function-post">
-                                        <img src="{{asset('image/icon-mat.png')}}" loading="lazy" alt="" class="item-icon-bottom-post">
+                                        <img src="<?php echo e(asset('image/icon-mat.png')); ?>" loading="lazy" alt="" class="item-icon-bottom-post">
                                         <span class="title-icon-function-post">240</span>
                                     </div>
                                 </div>
                                 <div class="line-bottom-content-post-right">
                                     <div class="item-icon-function-post">
-                                        <img src="{{asset('image/icon-cs.png')}}" loading="lazy" alt="" class="item-icon-bottom-post">
+                                        <img src="<?php echo e(asset('image/icon-cs.png')); ?>" loading="lazy" alt="" class="item-icon-bottom-post">
                                         <span class="title-icon-function-post text-icon-function-post">Chia sẻ</span>
                                     </div>
                                     <div class="item-icon-function-post">
@@ -223,7 +222,7 @@
                                     </div>
                                     <div class="item-icon-function-post" onclick="toggleRelatedPosts(1)">
                                         <span class="title-icon-function-post text-icon-function-post">Bài viết liên quan</span>
-                                        <img src="{{asset('image/icon-arrow-down.png')}}" loading="lazy" alt=""
+                                        <img src="<?php echo e(asset('image/icon-arrow-down.png')); ?>" loading="lazy" alt=""
                                              class="item-icon-bottom-post item-icon-bottom-post-mobile">
                                     </div>
                                 </div>
@@ -232,7 +231,7 @@
                     </div>
                 </div>
 
-                {{--video post--}}
+                
                 <div class="box-post-full">
                     <div class="box-item-post">
                         <div class="item-post-header">
@@ -243,7 +242,7 @@
                                 <div class="box-infor-user-post">
                                     <div class="line-name-user-post">
                                         <span class="name-user-post">Ngọc châu</span>
-                                        <img src="{{asset('image/icon-tick.png')}}" loading="lazy" alt="" class="icon-tick-xanh">
+                                        <img src="<?php echo e(asset('image/icon-tick.png')); ?>" loading="lazy" alt="" class="icon-tick-xanh">
                                     </div>
                                     <div class="line-bottom-header-post">
                                         <span class="title-date-header-post">21/08/2023</span><span
@@ -252,8 +251,8 @@
                                 </div>
                             </div>
                             <div class="item-post-header-right">
-                                <img src="{{asset('image/icon-star.png')}}" loading="lazy" alt="" class="icon-star-post">
-                                <img src="{{asset('image/icon-more.png')}}" loading="lazy" alt="" class="icon-more-post">
+                                <img src="<?php echo e(asset('image/icon-star.png')); ?>" loading="lazy" alt="" class="icon-star-post">
+                                <img src="<?php echo e(asset('image/icon-more.png')); ?>" loading="lazy" alt="" class="icon-more-post">
                             </div>
                         </div>
                         <div class="item-post-content">
@@ -273,21 +272,21 @@
                             <div class="line-bottom-content-post">
                                 <div class="line-bottom-content-post-left">
                                     <div class="item-icon-function-post">
-                                        <img src="{{asset('image/icon-tim.png')}}" loading="lazy" alt="" class="item-icon-bottom-post">
+                                        <img src="<?php echo e(asset('image/icon-tim.png')); ?>" loading="lazy" alt="" class="item-icon-bottom-post">
                                         <span class="title-icon-function-post">20</span>
                                     </div>
                                     <div class="item-icon-function-post">
-                                        <img src="{{asset('image/icon-bl.png')}}" loading="lazy" alt="" class="item-icon-bottom-post">
+                                        <img src="<?php echo e(asset('image/icon-bl.png')); ?>" loading="lazy" alt="" class="item-icon-bottom-post">
                                         <span class="title-icon-function-post">12</span>
                                     </div>
                                     <div class="item-icon-function-post">
-                                        <img src="{{asset('image/icon-mat.png')}}" loading="lazy" alt="" class="item-icon-bottom-post">
+                                        <img src="<?php echo e(asset('image/icon-mat.png')); ?>" loading="lazy" alt="" class="item-icon-bottom-post">
                                         <span class="title-icon-function-post">240</span>
                                     </div>
                                 </div>
                                 <div class="line-bottom-content-post-right">
                                     <div class="item-icon-function-post">
-                                        <img src="{{asset('image/icon-cs.png')}}" loading="lazy" alt="" class="item-icon-bottom-post">
+                                        <img src="<?php echo e(asset('image/icon-cs.png')); ?>" loading="lazy" alt="" class="item-icon-bottom-post">
                                         <span class="title-icon-function-post text-icon-function-post">Chia sẻ</span>
                                     </div>
                                     <div class="item-icon-function-post">
@@ -295,7 +294,7 @@
                                     </div>
                                     <div class="item-icon-function-post" onclick="toggleRelatedPosts(1)">
                                         <span class="title-icon-function-post text-icon-function-post">Bài viết liên quan</span>
-                                        <img src="{{asset('image/icon-arrow-down.png')}}" loading="lazy" alt=""
+                                        <img src="<?php echo e(asset('image/icon-arrow-down.png')); ?>" loading="lazy" alt=""
                                              class="item-icon-bottom-post item-icon-bottom-post-mobile">
                                     </div>
                                 </div>
@@ -304,17 +303,17 @@
                     </div>
                 </div>
 
-                {{--box ADS--}}
+                
                 <div class="box-ads">
                     ADS
                 </div>
 
-                {{--giá cả hàng hóa--}}
+                
                 <div class="box-table-commodity-prices">
                     <div class="table-commodity-prices-header">
-                        <img src="{{asset('image/bg-stack.png')}}" loading="lazy" alt="" class="img-bg-stack">
+                        <img src="<?php echo e(asset('image/bg-stack.png')); ?>" loading="lazy" alt="" class="img-bg-stack">
                         <div class="line-header-stack">
-                            <img src="{{asset('image/icon-box-stack.png')}}" loading="lazy" alt="" class="icon-stack">
+                            <img src="<?php echo e(asset('image/icon-box-stack.png')); ?>" loading="lazy" alt="" class="icon-stack">
                             GIÁ CẢ HÀNG HÓA
                         </div>
                     </div>
@@ -334,14 +333,14 @@
                     </div>
                 </div>
 
-                {{--bảng giá vàng và ngoại tệ--}}
+                
                 <div class="box-gold-foreign-currency">
 
                     <div class="box-table-gold-foreign-currency-item">
                         <div class="table-gold-header">
-                            <img src="{{asset('image/bg-coins.png')}}" loading="lazy" alt="" class="img-bg-stack">
+                            <img src="<?php echo e(asset('image/bg-coins.png')); ?>" loading="lazy" alt="" class="img-bg-stack">
                             <div class="line-header-gold">
-                                <img src="{{asset('image/icon-coins.png')}}" loading="lazy" alt="" class="icon-stack">
+                                <img src="<?php echo e(asset('image/icon-coins.png')); ?>" loading="lazy" alt="" class="icon-stack">
                                 GIÁ VÀNG
                             </div>
                         </div>
@@ -363,9 +362,9 @@
 
                     <div class="box-table-gold-foreign-currency-item">
                         <div class="table-gold-header">
-                            <img src="{{asset('image/bg-dollar.png')}}" loading="lazy" alt="" class="img-bg-stack">
+                            <img src="<?php echo e(asset('image/bg-dollar.png')); ?>" loading="lazy" alt="" class="img-bg-stack">
                             <div class="line-header-gold">
-                                <img src="{{asset('image/icon-dollar.png')}}" loading="lazy" alt="" class="icon-stack">
+                                <img src="<?php echo e(asset('image/icon-dollar.png')); ?>" loading="lazy" alt="" class="icon-stack">
                                 NGOẠI TỆ
                             </div>
                         </div>
@@ -387,17 +386,17 @@
 
                 </div>
 
-                {{--lịch kinh tế--}}
+                
                 <div class="box-table-commodity-prices box-table-economic-calendar">
                     <div class="table-commodity-prices-header">
-                        <img src="{{asset('image/bg-clock.png')}}" loading="lazy" alt="" class="img-bg-stack">
+                        <img src="<?php echo e(asset('image/bg-clock.png')); ?>" loading="lazy" alt="" class="img-bg-stack">
                         <div class="line-header-clock">
                             <div class="line-header-stack-content">
-                                <img src="{{asset('image/icon-bag.png')}}" loading="lazy" alt="" class="icon-stack">
+                                <img src="<?php echo e(asset('image/icon-bag.png')); ?>" loading="lazy" alt="" class="icon-stack">
                                 LỊCH KINH TẾ
                             </div>
                             <div class="line-header-stack-content">
-                                <img src="{{asset('image/icon-clock.png')}}" loading="lazy" alt="" class="icon-clock-table">
+                                <img src="<?php echo e(asset('image/icon-clock.png')); ?>" loading="lazy" alt="" class="icon-clock-table">
                                 <span class="title-clock-table">Thời gian hiện tại:</span>
                                 <span class="name-clock-table">10:46</span>
                             </div>
@@ -421,7 +420,7 @@
                             </tr>
                             <tr>
                                 <td class="col-content-kt-1">1 giờ 44 phút</td>
-                                <td class="col-content-kt-2"><img src="{{asset('image/icon-my.png')}}" loading="lazy" alt=""
+                                <td class="col-content-kt-2"><img src="<?php echo e(asset('image/icon-my.png')); ?>" loading="lazy" alt=""
                                                                   class="icon-co"> <span class="name-price">USD</span>
                                 </td>
                                 <td class="col-content-kt-3">Giá Xuất Khẩu (Tháng trên tháng)</td>
@@ -431,7 +430,7 @@
                             </tr>
                             <tr>
                                 <td class="col-content-kt-1">1 giờ 44 phút</td>
-                                <td class="col-content-kt-2"><img src="{{asset('image/icon-my.png')}}" loading="lazy" alt=""
+                                <td class="col-content-kt-2"><img src="<?php echo e(asset('image/icon-my.png')); ?>" loading="lazy" alt=""
                                                                   class="icon-co"> <span class="name-price">USD</span>
                                 </td>
                                 <td class="col-content-kt-3">Giá Xuất Khẩu (Tháng trên tháng)</td>
@@ -445,7 +444,7 @@
                             </tr>
                             <tr>
                                 <td class="col-content-kt-1">1 giờ 44 phút</td>
-                                <td class="col-content-kt-2"><img src="{{asset('image/icon-my.png')}}" loading="lazy" alt=""
+                                <td class="col-content-kt-2"><img src="<?php echo e(asset('image/icon-my.png')); ?>" loading="lazy" alt=""
                                                                   class="icon-co"> <span class="name-price">USD</span>
                                 </td>
                                 <td class="col-content-kt-3">Giá Xuất Khẩu (Tháng trên tháng)</td>
@@ -455,7 +454,7 @@
                             </tr>
                             <tr>
                                 <td class="col-content-kt-1">1 giờ 44 phút</td>
-                                <td class="col-content-kt-2"><img src="{{asset('image/icon-my.png')}}" loading="lazy" alt=""
+                                <td class="col-content-kt-2"><img src="<?php echo e(asset('image/icon-my.png')); ?>" loading="lazy" alt=""
                                                                   class="icon-co"> <span class="name-price">USD</span>
                                 </td>
                                 <td class="col-content-kt-3">Giá Xuất Khẩu (Tháng trên tháng)</td>
@@ -469,17 +468,17 @@
                     </div>
                 </div>
 
-                {{--lịch kinh tế banr mobile--}}
+                
                 <div class="box-table-commodity-prices box-table-commodity-prices-mobile">
                     <div class="table-commodity-prices-header">
-                        <img src="{{asset('image/bg-clock.png')}}" loading="lazy" alt="" class="img-bg-stack">
+                        <img src="<?php echo e(asset('image/bg-clock.png')); ?>" loading="lazy" alt="" class="img-bg-stack">
                         <div class="line-header-clock">
                             <div class="line-header-stack-content">
-                                <img src="{{asset('image/icon-bag.png')}}" loading="lazy" alt="" class="icon-stack">
+                                <img src="<?php echo e(asset('image/icon-bag.png')); ?>" loading="lazy" alt="" class="icon-stack">
                                 LỊCH KINH TẾ
                             </div>
                             <div class="line-header-stack-content">
-                                <img src="{{asset('image/icon-clock.png')}}" loading="lazy" alt="" class="icon-clock-table">
+                                <img src="<?php echo e(asset('image/icon-clock.png')); ?>" loading="lazy" alt="" class="icon-clock-table">
                                 <span class="name-clock-table">10:46</span>
                             </div>
                         </div>
@@ -494,7 +493,7 @@
                                 <td class="col-content-kt-mobile-1" colspan="2">
                                     <span class="name-content-kt-mobile-1">1 giờ 44 phút</span>
                                     <div class="col-content-kt-2">
-                                        <img src="{{asset('image/icon-my.png')}}" loading="lazy" alt="" class="icon-co">
+                                        <img src="<?php echo e(asset('image/icon-my.png')); ?>" loading="lazy" alt="" class="icon-co">
                                         <span class="name-price">USD</span>
                                     </div>
                                 </td>
@@ -517,7 +516,7 @@
                                 <td class="col-content-kt-mobile-1" colspan="2">
                                     <span class="name-content-kt-mobile-1">1 giờ 44 phút</span>
                                     <div class="col-content-kt-2">
-                                        <img src="{{asset('image/icon-my.png')}}" loading="lazy" alt="" class="icon-co">
+                                        <img src="<?php echo e(asset('image/icon-my.png')); ?>" loading="lazy" alt="" class="icon-co">
                                         <span class="name-price">USD</span>
                                     </div>
                                 </td>
@@ -543,7 +542,7 @@
                                 <td class="col-content-kt-mobile-1" colspan="2">
                                     <span class="name-content-kt-mobile-1">1 giờ 44 phút</span>
                                     <div class="col-content-kt-2">
-                                        <img src="{{asset('image/icon-my.png')}}" loading="lazy" alt="" class="icon-co">
+                                        <img src="<?php echo e(asset('image/icon-my.png')); ?>" loading="lazy" alt="" class="icon-co">
                                         <span class="name-price">USD</span>
                                     </div>
                                 </td>
@@ -566,7 +565,7 @@
                                 <td class="col-content-kt-mobile-1" colspan="2">
                                     <span class="name-content-kt-mobile-1">1 giờ 44 phút</span>
                                     <div class="col-content-kt-2">
-                                        <img src="{{asset('image/icon-my.png')}}" loading="lazy" alt="" class="icon-co">
+                                        <img src="<?php echo e(asset('image/icon-my.png')); ?>" loading="lazy" alt="" class="icon-co">
                                         <span class="name-price">USD</span>
                                     </div>
                                 </td>
@@ -591,38 +590,38 @@
                     </div>
                 </div>
 
-                {{--box đặt câu hỏi--}}
+                
                 <div class="box-ask-questions">
                     <div class="item-ask-questions">
                         <div class="header-item-ask-questions">
-                            <img src="{{asset('image/icon-hoi.png')}}" loading="lazy" alt="" class="icon-ask">
+                            <img src="<?php echo e(asset('image/icon-hoi.png')); ?>" loading="lazy" alt="" class="icon-ask">
                             <span class="name-header-item-ask">Đặt câu hỏi cho chuyên gia</span>
                         </div>
                         <textarea name="" class="box-text-content" placeholder="Đặt câu hỏi"></textarea>
                         <div class="btn-send-ask">
                             <span>Gửi</span>
-                            <img src="{{asset('image/icon-right.png')}}" loading="lazy" alt="" class="icon-right-button">
+                            <img src="<?php echo e(asset('image/icon-right.png')); ?>" loading="lazy" alt="" class="icon-right-button">
                         </div>
                     </div>
                     <div class="item-ask-questions">
                         <div class="header-item-ask-questions">
-                            <img src="{{asset('image/icon-i.png')}}" loading="lazy" alt="" class="icon-ask">
+                            <img src="<?php echo e(asset('image/icon-i.png')); ?>" loading="lazy" alt="" class="icon-ask">
                             <span class="name-header-item-ask">Thông tin doanh nghiệp</span>
                         </div>
                         <textarea name="" class="box-text-content" placeholder="Mã CK hoặc tên công ty"></textarea>
                         <div class="btn-send-ask">
                             <span>Tìm kiếm</span>
-                            <img src="{{asset('image/icon-right.png')}}" loading="lazy" alt="" class="icon-right-button">
+                            <img src="<?php echo e(asset('image/icon-right.png')); ?>" loading="lazy" alt="" class="icon-right-button">
                         </div>
                     </div>
                 </div>
             </div>
 
         </div>
-        @include('components.template.page-right')
+        <?php echo $__env->make('components.template.page-right', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     </div>
-@endsection
-@section('js')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('js'); ?>
     <script>
         document.addEventListener("click", function (event) {
             let postBox = document.querySelector(".box-create-post");
@@ -852,4 +851,6 @@
             fetchForeignCurrency();
         });
     </script>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layout.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\laragon\www\mxh-v2-main\resources\views/home/index3.blade.php ENDPATH**/ ?>

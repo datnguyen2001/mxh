@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-{{--    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />--}}
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{--    <title>@yield('title')</title>--}}
-{{--    @include('layout.shared.meta-seo')--}}
-{{--    <meta name="robots" content="@yield('Robots','index, follow')" />--}}
-{{--    <meta http-equiv="refresh" content="3600" />--}}
-{{--    <meta name="Language" content="vi" />--}}
-{{--    <meta name="distribution" content="Global" />--}}
-{{--    <meta name="revisit-after" content="1 days" />--}}
-{{--    <meta name="GENERATOR" content="{{config('siteInfo.site_path')}}">--}}
-{{--    <meta name="RATING" content="GENERAL" />--}}
-{{--    <link rel="shortcut icon" href="{{config('siteInfo.favicon')}}" type="image/png">--}}
-{{--    <meta name="site_path" content="{{config('siteInfo.site_path')}}">--}}
-{{--    <meta name="author" content="{{ config('siteInfo.author') }}">--}}
-{{--    <meta name="og:site_name" content="{{ config('siteInfo.site_name') }}">--}}
-{{--    <meta name="copyright" content="Copyright (c) by {{config('siteInfo.copyright')}}" />--}}
-{{--    <meta http-equiv="x-dns-prefetch-control" content="on" />--}}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <link rel="dns-prefetch" href="https://static.mediacdn.vn/">
-    <link rel="dns-prefetch" href="{{env('THUMB_DOMAIN')}}">
+    <link rel="dns-prefetch" href="<?php echo e(env('THUMB_DOMAIN')); ?>">
     <link rel="dns-prefetch" href="https://videothumbs.mediacdn.vn/">
     <link rel="dns-prefetch" href="https://videothumbs-ext.mediacdn.vn/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
-{{--    @include('layout.shared.page-config')--}}
-    @yield('css')
+    <link rel="stylesheet" href="<?php echo e(asset('css/style.css')); ?>">
+
+    <?php echo $__env->yieldContent('css'); ?>
     <style>
         .box-ad-tnv{
             margin-bottom: 20px;
@@ -77,38 +77,38 @@
 </head>
 <body>
 <div id="admWrapsite">
-{{--    @include('layout.shared.ads-tracking')--}}
-{{--    @include('layout.shared.ga')--}}
-{{--    @include('layout.shared.ads-core')--}}
-    @include('layout.header2')
+
+
+
+    <?php echo $__env->make('layout.header2', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <div class="main">
-        @yield('content')
+        <?php echo $__env->yieldContent('content'); ?>
     </div>
-    @include('layout.footer2')
-{{--    <script type="text/javascript">--}}
-{{--        if ('serviceWorker' in navigator) {--}}
-{{--            window.addEventListener('load', () => {--}}
-{{--                navigator.serviceWorker.register('sw.js')--}}
-{{--                    .then(swReg => {--}}
-{{--                        console.log('Service Worker is registered', swReg);--}}
-{{--                    })--}}
-{{--                    .catch(err => {--}}
-{{--                        console.error('Service Worker Error', err);--}}
-{{--                    });--}}
-{{--            });--}}
-{{--        }--}}
-{{--    </script>--}}
-{{--    <div>--}}
-{{--        <input type="hidden" name="dbcheck" id="dbcheck" value="{{env('SITE_ID','0').env('APP_ENV','0')}}">--}}
-{{--    </div>--}}
+    <?php echo $__env->make('layout.footer2', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div id="backToTop" class="back-to-top">
-        <img src="{{asset('image/arrow-top-page.png')}}" alt="">
+        <img src="<?php echo e(asset('image/arrow-top-page.png')); ?>" alt="">
     </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-@yield('js')
+<?php echo $__env->yieldContent('js'); ?>
 <script>
     function openGlightbox() {
         const hiddenImages = document.querySelectorAll('#hidden-images a');
@@ -196,10 +196,10 @@
 
         if (relatedPosts.style.display === "block") {
             relatedPosts.style.display = "none";
-            toggleButton.src = "{{asset('image/icon-arrow-down.png')}}";
+            toggleButton.src = "<?php echo e(asset('image/icon-arrow-down.png')); ?>";
         } else {
             relatedPosts.style.display = "block";
-            toggleButton.src = "{{asset('image/icon-arrow-up.png')}}";
+            toggleButton.src = "<?php echo e(asset('image/icon-arrow-up.png')); ?>";
         }
     }
     $(document).ready(function () {
@@ -221,3 +221,4 @@
 
 </body>
 </html>
+<?php /**PATH D:\laragon\www\mxh-v2-main\resources\views/layout/master.blade.php ENDPATH**/ ?>

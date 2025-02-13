@@ -35,7 +35,38 @@ class RedisPipeLineRepository
                         $colection = collect($arrayPipeLine[$index]); // sắp xếp và thu thập dữ liệu từ PipeLine lần 1
                         $colection = $colection->sortKeys()->values()->whereNotNull()->all();
 
-                        if (!empty($value['callback'])) {
+                        if (isset($value['callbackHgetAll']) && $value['callbackHgetAll'] == true) {
+                            $objkey = [];
+
+                            if (!empty($colection)) {
+                                $colection = array_splice($colection, (int)$value['start'], (int)$value['stop'] + 1);
+                                foreach ($colection as $item) {
+                                    if (is_string($item)) {
+                                        $item = json_decode($item);
+                                        $objkey[] = 'newspublish:newsid' . $item->NewsId ?? '';
+                                    }
+                                }
+                            }
+
+                            if (!empty($objkey)) {
+                                $arr = [
+                                    'keymap' => $key,
+                                    'length' => count($objkey),
+                                ];
+                                $megaKey = array_merge($megaKey, $objkey);
+                                array_push($setdataMget, $arr);
+                            } else {
+                                $arr = [
+                                    'keymap' => $key,
+                                    'length' => count($colection),
+                                ];
+                                $megaKey = array_merge($megaKey, $colection);
+                                array_push($setdataMget, $arr);
+                            }
+
+
+                        }
+                        elseif(!empty($value['callback'])) {
                             $objkey = [];
 
                             if (!empty($colection)){
