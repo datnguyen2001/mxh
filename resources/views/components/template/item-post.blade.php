@@ -117,22 +117,27 @@
                             <p class="no-images">Không có ảnh nào.</p>
                         @endif
                     </div>
+                    <input type="hidden" value="{{$item->NewsId}}" name="newsId">
+                    <input type="hidden" value="{{$item->Type}}" name="type">
+                    <input type="hidden" value="{{$item->SiteId}}" name="siteId">
+                    <input type="hidden" value="{{$item->ZoneId}}" name="zoneId">
+                    <input type="hidden" value="{{$item->Url}}" name="url">
                     <div class="line-bottom-content-post">
                         <div class="line-bottom-content-post-left">
                             <div class="item-icon-function-post">
                                 <img src="{{asset('image/icon-tim.png')}}" loading="lazy" alt=""
-                                     class="item-icon-bottom-post">
-                                <span class="title-icon-function-post">20</span>
+                                     class="item-icon-bottom-post add-icon-favourite">
+                                <span class="title-icon-function-post count-favourite">0</span>
                             </div>
                             <div class="item-icon-function-post">
                                 <img src="{{asset('image/icon-bl.png')}}" loading="lazy" alt=""
                                      class="item-icon-bottom-post">
-                                <span class="title-icon-function-post">12</span>
+                                <span class="title-icon-function-post count-comment">0</span>
                             </div>
                             <div class="item-icon-function-post">
                                 <img src="{{asset('image/icon-mat.png')}}" loading="lazy" alt=""
                                      class="item-icon-bottom-post">
-                                <span class="title-icon-function-post">240</span>
+                                <span class="title-icon-function-post count-see">0</span>
                             </div>
                         </div>
                         <div class="line-bottom-content-post-right">
