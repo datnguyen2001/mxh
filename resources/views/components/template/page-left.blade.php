@@ -12,7 +12,7 @@
                     <a href="{{$item->Url}}" class="item--featured-topic-post">
                         <img
                             src="{{ $item->Avatar ? $item->Avatar : asset('image/img-ex.png') }}"
-                            alt="{{$item->Title??''}}" loading="lazy" class="img-post-featured-topic">
+                            alt="{{$item->Title}}" loading="lazy" class="img-post-featured-topic">
                         <div class="title-featured-topic-post">
                             {{$item->Title}}
                         </div>

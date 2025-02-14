@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\VerifySecretKey;
 use App\Http\Controllers\ApiRedisCacheController;
 use App\Http\Controllers\VoteController;
+use \App\Http\Controllers\ApiUserController;
+use \Illuminate\Support\Facades\Http;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,4 +65,19 @@ Route::group(['middleware' => ['ResponseRedisCache']], function () {
 
     Route::get('/get-vote-info-{Id}.htm', [VoteController::class, 'getVoteInfo'])->where(['Id'=> '([0-9]+)'])->name('loadMoreJsonApi');
 
+});
+
+Route::get('/userprofile.htm',[ApiUserController::class,'index'])->name('User.profile');
+
+//api lịch kinh tế
+Route::get('/proxy-api/lsk', function () {
+    $response = Http::get('https://cafef.vn/api/info.ashx?type=lsk');
+    return response($response->body(), 200)->header("Content-Type", "application/json");
+});
+
+//api giá vàng
+Route::get('/gold-prices', function () {
+    $response = Http::get('https://nc97.cnnd.vn/api-gold.htm?m=get_price&query=company%3DSJC%26type%3Dnu-trang-99%26from_date%3D2024-01-24T10%3A56%3A00%26to_date%3D2024-04-25T10%3A56%3A00%26zone%3Dto%C3%A0n%20qu%E1%BB%91c');
+
+    return response()->json($response->json());
 });

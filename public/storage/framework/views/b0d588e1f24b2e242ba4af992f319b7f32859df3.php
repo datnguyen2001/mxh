@@ -12,7 +12,7 @@
                     <a href="<?php echo e($item->Url); ?>" class="item--featured-topic-post">
                         <img
                             src="<?php echo e($item->Avatar ? $item->Avatar : asset('image/img-ex.png')); ?>"
-                            alt="<?php echo e($item->Title??''); ?>" loading="lazy" class="img-post-featured-topic">
+                            alt="<?php echo e($item->Title); ?>" loading="lazy" class="img-post-featured-topic">
                         <div class="title-featured-topic-post">
                             <?php echo e($item->Title); ?>
 

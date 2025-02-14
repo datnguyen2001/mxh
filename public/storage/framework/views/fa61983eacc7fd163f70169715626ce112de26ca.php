@@ -18,6 +18,7 @@
 
 
 
+    <meta name="asset-url" content="<?php echo e(asset('')); ?>">
     <link rel="dns-prefetch" href="https://static.mediacdn.vn/">
     <link rel="dns-prefetch" href="<?php echo e(env('THUMB_DOMAIN')); ?>">
     <link rel="dns-prefetch" href="https://videothumbs.mediacdn.vn/">
@@ -26,6 +27,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
     <link rel="stylesheet" href="<?php echo e(asset('css/style.css')); ?>">
 
+    <?php echo $__env->make('layout.shared.page-config', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <?php echo $__env->yieldContent('css'); ?>
     <style>
         .box-ad-tnv{
@@ -108,100 +110,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 <?php echo $__env->yieldContent('js'); ?>
+<?php echo $__env->make('expert.Js-login', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 <script>
-    function openGlightbox() {
-        const hiddenImages = document.querySelectorAll('#hidden-images a');
-        if (hiddenImages.length > 0) {
-            hiddenImages[0].click();
-        }
-    }
-
-    const lightbox = GLightbox({ selector: '.glightbox' });
-
-    var swiper = new Swiper(".mySwiperPost", {
-        loop: true,
-        spaceBetween: 10,
-        slidesPerView: 4.4,
-        freeMode: true,
-        watchSlidesProgress: true,
-        breakpoints: {
-            1024: {
-                slidesPerView: 4.4,
-            },
-            768: {
-                slidesPerView: 3.5,
-            },
-            0: {
-                slidesPerView: 3.5,
-            }
-        }
-    });
-    var swiper2 = new Swiper(".mySwiperPost2", {
-        loop: true,
-        spaceBetween: 10,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        thumbs: {
-            swiper: swiper,
-        },
-    });
-    var swipers = new Swiper(".mySwiper", {
-        slidesPerView: 4,
-        spaceBetween: 16,
-        breakpoints: {
-            1024: {
-                slidesPerView: 4,
-            },
-            768: {
-                slidesPerView: 3.3,
-            },
-            0: {
-                slidesPerView: 2.5,
-                spaceBetween: 8,
-            }
-        }
-    });
-    var mySwiperMarket = new Swiper(".mySwiperMarket", {
-        slidesPerView: 4,
-        spaceBetween: 6,
-        navigation: {
-            nextEl: ".swiper-market-button-next",
-            prevEl: ".swiper-market-button-prev",
-        },
-        breakpoints: {
-            1024:{
-                slidesPerView: 4,
-            },
-            768: {
-                slidesPerView: 3,
-            },
-            0: {
-                slidesPerView: 2.5,
-            }
-        }
-    });
-    function shareToFacebook(event,postUrl) {
-        event.preventDefault();
-        const url = encodeURIComponent(postUrl);
-        window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
-    }
-</script>
-<script>
-    function toggleRelatedPosts(postId) {
-        let relatedPosts = document.getElementById(`related-posts-${postId}`);
-        let toggleButton = document.querySelector(`.item-icon-function-post[onclick="toggleRelatedPosts(${postId})"] img`);
-
-        if (relatedPosts.style.display === "block") {
-            relatedPosts.style.display = "none";
-            toggleButton.src = "<?php echo e(asset('image/icon-arrow-down.png')); ?>";
-        } else {
-            relatedPosts.style.display = "block";
-            toggleButton.src = "<?php echo e(asset('image/icon-arrow-up.png')); ?>";
-        }
-    }
     $(document).ready(function () {
         const backToTop = $('#backToTop');
 

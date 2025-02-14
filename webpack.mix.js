@@ -21,14 +21,15 @@ function resolve(dir) {
 //base js sẽ dùng chung
 mix.scripts([
     "resources/core/js/lib/jquery.min.js",
-    "resources/core/js/lib/swiper-bundle.min.js",
-    "resources/core/js/lib/lozad.min.js",
+    "resources/core/js/lib/js.cookie.min.js",
+    "resources/core/js/lib/jquery.timeago.js",
+    "resources/core/js/lib/jquery-ui.min.js",
     "resources/core/js/main/utility.js",
+    "resources/template/web/js/home.js",
+    "resources/template/web/js/post.js",
 
-], "public/web_js/20231108/mic.base.js").minify(
-    "public/web_js/20231108/mic.base.js");
-
-
+], "public/web_js/20240927/cungcau.base.js").minify(
+    "public/web_js/20240927/cungcau.base.js");
 
 //Home
 mix.styles(
@@ -167,6 +168,15 @@ mix.scripts(
 //     "resources/core/js/main/login/loginmainver2.js",
 //     "resources/core/js/main/login/qrcode.js",
 // ],'public/web_js/20230922/cnnd.login.js').minify('public/web_js/20230922/cnnd.login.js');
+
+//Login
+mix.scripts([
+    "resources/core/js/main/login/log.js",
+    "resources/core/js/main/login/oidc-client.js",
+    "resources/core/js/main/login/signalr.min.js",
+    "resources/core/js/main/login/code-identityserver-sample.js",
+    "resources/core/js/main/login/loginmain.js",
+],'public/web_js/cungcau.login.v06102022.js').minify('public/web_js/cungcau.login.v06102022.js');
 
 
 

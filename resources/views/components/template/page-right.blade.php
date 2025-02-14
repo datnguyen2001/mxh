@@ -19,7 +19,7 @@
                             <img
                                 src="https://cungcau.qltns.mediacdn.vn/{{$item->Avatar}}" loading="lazy"
                                 alt="{{$item->Author}}" class="img-info-post-trend-right">
-                            <span class="text-info-post-trend">{{$item->Author?:'Ngọc Châu'}}</span>
+                            <span class="text-info-post-trend">{{$item->Author}}</span>
                         </div>
                         <span
                             class="text-time-post-trend"> {{ \Carbon\Carbon::parse($item->LastModifiedDate)->format('d/m/Y') }}</span>

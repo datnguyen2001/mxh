@@ -1,6 +1,6 @@
 <div class="header__new">
     <div class="header__content page__content">
-        <img src="{{asset('image/logo.png')}}" alt="">
+        <img src="{{asset('image/logo.png')}}" alt="" class="img-logo">
         <div class="box-content-link">
             <div class="header__content-center">
                 <div class="header__content-center-left">
@@ -40,9 +40,9 @@
                 <div class="box-noti-header">
                     <img src="{{asset('image/icon-noti.png')}}" alt="" class="header-icon-bell">
                 </div>
-                <div class="box-account-header">
-                    <img src="{{asset('image/icon-people.png')}}" alt="" class="header-icon-user">
-                </div>
+                <a href="javascript:;" class="box-account-header" id="head_login">
+                    <img src="{{asset('image/avatar-user-df.png')}}" alt="" class="header-icon-user">
+                </a>
             </div>
         </div>
 

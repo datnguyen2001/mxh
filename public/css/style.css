@@ -16,7 +16,9 @@ body {
 a {
     text-decoration: none;
 }
-
+.img-logo{
+    width: 150px;
+}
 .header__new {
     width: 100%;
     background: white;
@@ -134,20 +136,11 @@ a {
     height: 24px;
 }
 
-.box-account-header {
+.header-icon-user {
     width: 40px;
     height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 50%;
-    background: #C4343D;
-    cursor: pointer;
-}
-
-.header-icon-user {
-    width: 20px;
-    height: 20px;
+    object-fit: cover;
 }
 
 .footer__new {
@@ -360,6 +353,10 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.box-icon-topic img,.icon-clock-table{
+    width: 16px;
+    height: 16px;
 }
 
 .title-topic {
@@ -892,6 +889,9 @@ a {
 .table-commodity-prices-content thead th {
     padding: 10px 12px;
 }
+.table-kt-content thead th{
+    padding: 10px 5px;
+}
 
 .col-content-tbody-one-item {
     display: flex;
@@ -1070,13 +1070,20 @@ a {
 .col-content-kt-1, .col-content-kt-2, .col-content-kt-3 {
     text-align: start;
 }
+.col-content-kt-1{
+    min-width: 75px!important;
+}
+.col-content-kt-3{
+    text-align: center;
+    line-height: 18px;
+}
 
 .col-content-kt-4, .col-content-kt-5, .col-content-kt-6 {
     text-align: right;
 }
 
 .col-content-kt-2 {
-    display: flex;
+    /*display: flex;*/
     align-items: center;
     gap: 4px;
 }
@@ -1412,6 +1419,145 @@ a {
 .line-more-describe-post img {
     width: 16px;
     height: 16px;
+}
+
+.home_popup {
+    width: 400px;
+    margin: calc((100vh - 400px)/ 2) auto 0;
+    background: #fff;
+    padding: 20px;
+    z-index: 20
+}
+
+.home_popup .col {
+    width: 50%;
+    height: 100%
+}
+
+.home_popup .col input {
+    width: 100%;
+    height: 42px;
+    padding: 10px 7px;
+    border-radius: 5px;
+    border: 2px solid #ececec;
+    display: block;
+    font-size: 12px;
+    outline: unset;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    line-height: 18px
+}
+
+.home_popup .label {
+    font: normal 17px/normal Roboto-Regular
+}
+
+.home_popup .two-col {
+    width: 100%;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0 20px 0
+}
+
+.home_popup .two-col .col:first-child {
+    margin-right: 20px
+}
+
+.home_popup .cappcha {
+    display: flex;
+    align-items: center;
+    height: 100%
+}
+
+.home_popup .cappcha .image {
+    margin-right: 20px;
+    height: 100%
+}
+
+.home_popup .cappcha .change-capcha {
+    margin-top: 6px
+}
+
+.home_popup-title {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 20px;
+    color: #ae253d;
+    font: normal 17px/normal Roboto-Bold;
+    margin-bottom: 20px
+}
+
+.home_popup-email {
+    padding: 10px 7px;
+    border-radius: 5px;
+    border: 2px solid #ececec;
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    outline: unset;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    line-height: 18px
+}
+
+.home_popup-ques {
+    padding: 10px 7px;
+    border-radius: 5px;
+    border: 2px solid #ececec;
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    outline: unset;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    line-height: 18px;
+    resize: none;
+    margin: 10px 0 20px 0
+}
+
+.home_popup-group {
+    display: flex;
+    justify-content: center
+}
+
+.home_popup-button {
+    color: #fff;
+    font: normal 13px/normal Roboto-Regular;
+    width: 86px;
+    height: 28px;
+    background: #ae253d;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer
+}
+
+.home_popup-button:first-child {
+    margin-right: 15px
+}
+
+.modal-background1 {
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000;
+    background-color: rgba(0,0,0,.4)
+}
+
+.modal-background {
+    display: none;
+    position: fixed;
+    left: 0;
+    z-index: 11;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto
 }
 
 @media (max-width: 1269px) {
@@ -1998,9 +2144,9 @@ a {
         vertical-align: bottom;
     }
 
-    .box-table-economic-calendar {
-        display: none;
-    }
+    /*.box-table-economic-calendar {*/
+    /*    display: none;*/
+    /*}*/
 
     .box-table-commodity-prices-mobile {
         display: inline-block;

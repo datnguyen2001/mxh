@@ -2,12 +2,13 @@
     function getMeta(t) { let e = document.getElementsByTagName("meta"); for (let n = 0; n < e.length; n++)if (e[n].getAttribute("name") === t) return e[n].getAttribute("content"); return "" }
     var hdUserAgent = getMeta("uc:useragent");
     var isNotAllow3rd = hdUserAgent.includes("not-allow-ads");
-  
+
     var pageSettings = {
         Domain: "<?php echo e(config('siteInfo.site_path')); ?>",
         sharefbApiDomain: "<?php echo e(env('SHEAR_FB_API_DOMAIN')); ?>",
         videoplayer: "<?php echo e(env('VIDEO_PLAYER')); ?>",
         VideoToken: "<?php echo e(env('VIDEO_TOKEN')); ?>",
+        ajaxDomain: "<?php echo e(env('DOMAIN_UTILS')); ?>",
         commentSiteName: "<?php echo e(env('COMMENT_SITE_NAME')); ?>",
         DomainUtils: "<?php echo e(env('DOMAIN_UTILS')); ?>",
         imageDomain: "<?php echo e(env('THUMB_DOMAIN')); ?>",
@@ -60,5 +61,6 @@
         }, 100);
     }
 </script>
+
 
 <?php /**PATH D:\laragon\www\mxh-v2-main\resources\views/layout/shared/page-config.blade.php ENDPATH**/ ?>

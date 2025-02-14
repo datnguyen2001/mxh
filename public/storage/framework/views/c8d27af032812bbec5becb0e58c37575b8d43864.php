@@ -19,7 +19,7 @@
                             <img
                                 src="https://cungcau.qltns.mediacdn.vn/<?php echo e($item->Avatar); ?>" loading="lazy"
                                 alt="<?php echo e($item->Author); ?>" class="img-info-post-trend-right">
-                            <span class="text-info-post-trend"><?php echo e($item->Author?:'Ngọc Châu'); ?></span>
+                            <span class="text-info-post-trend"><?php echo e($item->Author); ?></span>
                         </div>
                         <span
                             class="text-time-post-trend"> <?php echo e(\Carbon\Carbon::parse($item->LastModifiedDate)->format('d/m/Y')); ?></span>

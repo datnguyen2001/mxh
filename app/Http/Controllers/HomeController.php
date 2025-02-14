@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Helpers\ElasticsearchHelpers;
 use App\Repositories\NewsRepository;
 use App\Repositories\RedisPipeLineRepository;
 use App\Repositories\ZoneRepository;
@@ -21,13 +22,14 @@ class HomeController extends Controller
     public function index()
     {
         $homeKey = require(config_path() . '/keyPageWeb/home_new.php');
-
         $pipeLineData = $this->redisPipeLine->getDataByPipeLine($homeKey);
 
-        $featuredTopics = $pipeLineData['featuredTopics']??[];
+        $featuredTopics = $this->news->formatDataByEmbedbox($pipeLineData['featuredTopics']??[]);
         $trendPost = $pipeLineData['trendPost']??[];
-        $homePost = $this->news->formatNewsDefault($pipeLineData['homePost'] ?? [],592,370,[],10,0,0,10);
-//        dd($homePost);
+        $homePostTop9 = $this->news->formatNewsDefault($pipeLineData['homePost'] ?? [],592,370,[],10,0,0,10);
+        $homePostMore = $this->news->formatNewsDefault($pipeLineData['homePostMore'] ?? [],592,370,$homePostTop9,10,0,0,10);
+        $homePost = array_merge($homePostTop9, $homePostMore);
+
         $data = [
             'featuredTopics' => $featuredTopics,
             'trendPost'=>$trendPost,

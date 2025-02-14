@@ -9,6 +9,7 @@ use App\Http\Controllers\ThreadController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\MediaController;
 use App\Http\Controllers\CacheManagerRedisController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\RssController;
 use App\Http\Controllers\ApiRedisCacheController;
@@ -30,6 +31,9 @@ Route::get('/404.htm', function () {
     return abort(404);
 });
 
+Route::get('/code-identityserver-sample-callback.html', [LoginController::class, 'login_callback']);
+Route::get('/code-identityserver-sample-callback-signout.html', [LoginController::class, 'callback_signout']);
+Route::get('/code-identityserver-sample-silent.html', [LoginController::class, 'sample_silent']);
 
 //Cache link .net
 Route::get('/cached/handler.ashx',[ApiRedisCacheController::class,'index']);

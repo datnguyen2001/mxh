@@ -2,12 +2,13 @@
     function getMeta(t) { let e = document.getElementsByTagName("meta"); for (let n = 0; n < e.length; n++)if (e[n].getAttribute("name") === t) return e[n].getAttribute("content"); return "" }
     var hdUserAgent = getMeta("uc:useragent");
     var isNotAllow3rd = hdUserAgent.includes("not-allow-ads");
-  
+
     var pageSettings = {
         Domain: "{{config('siteInfo.site_path')}}",
         sharefbApiDomain: "{{env('SHEAR_FB_API_DOMAIN')}}",
         videoplayer: "{{env('VIDEO_PLAYER')}}",
         VideoToken: "{{env('VIDEO_TOKEN')}}",
+        ajaxDomain: "{{env('DOMAIN_UTILS')}}",
         commentSiteName: "{{env('COMMENT_SITE_NAME')}}",
         DomainUtils: "{{env('DOMAIN_UTILS')}}",
         imageDomain: "{{env('THUMB_DOMAIN')}}",

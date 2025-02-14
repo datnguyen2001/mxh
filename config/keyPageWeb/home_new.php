@@ -20,5 +20,11 @@ return
             'stop' => 20,
             'callbackHgetAll' => true
         ],
+        'homePostMore' => [
+            'cmd' => 'zrevrange',
+            'key' => sprintf(config('keyredis.KeyNewsInZoneIsOnHome')??'',0),
+            'start' => 0,
+            'stop' => 19,
+        ],
 
     ];
