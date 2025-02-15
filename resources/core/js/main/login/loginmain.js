@@ -67,6 +67,20 @@ function intAuthen(user) {
 
         }
 
+        let profileMenu = document.querySelector(".header__profile");
+        let loginHeader = document.querySelector(".header-is-login");
+
+        loginHeader.addEventListener("click", function (event) {
+            event.stopPropagation();
+            profileMenu.style.display = "inline-block";
+        });
+
+        document.addEventListener("click", function (event) {
+            if (!profileMenu.contains(event.target) && !loginHeader.contains(event.target)) {
+                profileMenu.style.display = "none";
+            }
+        });
+
         getUserLiked(user)
 
         if ($('.btn-follow').length){
@@ -1107,3 +1121,31 @@ function setCookie(c_name, value, exdays) {
     var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString()) + ';path=/';
     document.cookie = c_name + "=" + c_value;
 }
+
+let linkUrl = document.querySelector('meta[name="asset-url"]').getAttribute("content");
+const menu = document.querySelector(".mobile-menu");
+const toggleMenuBtn = document.querySelector(".icon-tab-header-mobile");
+let isMenuOpen = false;
+
+toggleMenuBtn.addEventListener("click", function () {
+    if (!isMenuOpen) {
+        menu.style.right = "0";
+        toggleMenuBtn.src = linkUrl+"image/icon-close-menu.png";
+        toggleMenuBtn.classList.add("menu-open");
+    } else {
+        menu.style.right = "-100%";
+        toggleMenuBtn.src = linkUrl+"image/tab-header-mobile.png";
+        toggleMenuBtn.classList.remove("menu-open");
+    }
+    isMenuOpen = !isMenuOpen;
+});
+
+// Đóng menu khi click ra ngoài
+document.addEventListener("click", function (event) {
+    if (!menu.contains(event.target) && !toggleMenuBtn.contains(event.target)) {
+        menu.style.right = "-100%";
+        toggleMenuBtn.src = linkUrl+"image/tab-header-mobile.png";
+        toggleMenuBtn.classList.remove("menu-open");
+        isMenuOpen = false;
+    }
+});

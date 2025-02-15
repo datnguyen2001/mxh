@@ -1,4 +1,4 @@
-<div class="box-post-full">
+<div class="box-post-full" data-id='<?php echo e($item->NewsId); ?>' >
     <div class="box-item-post">
         <div class="item-post-header">
             <div class="item-post-header-left">

@@ -17,7 +17,7 @@ return
             'cmd' => 'hGetAll',
             'key' => sprintf(config('keyredis.KeyNewsPosition')??'',0,1),
             'start' => 0,
-            'stop' => 20,
+            'stop' => 19,
             'callbackHgetAll' => true
         ],
         'homePostMore' => [

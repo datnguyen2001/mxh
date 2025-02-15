@@ -67,7 +67,7 @@ $(document).ready(function() {
 
         crefresh.click(function (e) {
             e.preventDefault();
-            cimg.attr('src', pageSettings.ajaxDomain + '/capcha-sendqa.htm?c=1&siteid=174');
+            cimg.attr('src', pageSettings.ajaxDomain + '/capcha-sendqa.htm?c=1&siteid=174&v=' + new Date().getTime());
         });
 
         function resetInput() {
@@ -500,36 +500,39 @@ $(document).ready(function() {
         });
     });
 
-    // document.addEventListener("click", function (event) {
-    //     let postBox = document.querySelector(".box-create-post");
-    //     let inputCreatePost = document.querySelector(".input-create-post");
-    //     let expandedPost = document.getElementById("expandedPost");
-    //
-    //     // Kiểm tra xem click có nằm trong phần box-create-post không
-    //     if (!postBox.contains(event.target)) {
-    //         // Nếu click bên ngoài, ẩn expandedPost và hiển thị input lại
-    //         expandedPost.style.display = "none";
-    //         inputCreatePost.style.display = "block";
-    //         document.querySelector('.name-info-user-create-post').style.display = "none";
-    //     }
-    // });
-    //
-    // function expandPostBox() {
-    //     document.querySelector('.input-create-post').style.display = 'none';
-    //     document.getElementById('expandedPost').style.display = 'flex';
-    //     document.querySelector('.name-info-user-create-post').style.display = 'inline-block';
-    // }
-    //
-    // function submitPost() {
-    //     let content = document.querySelector('.expanded-post textarea').value;
-    //     if (content.trim() !== '') {
-    //         alert("Bài viết đã được đăng: " + content);
-    //         document.querySelector('.expanded-post textarea').value = '';
-    //     }
-    //     // Ẩn lại phần mở rộng sau khi đăng bài
-    //     document.getElementById('expandedPost').style.display = 'none';
-    //     document.querySelector('.input-create-post').style.display = 'block';
-    //     document.querySelector('.name-info-user-create-post').style.display = "none";
-    // }
+    let postBox = document.querySelector(".box-create-post");
+    let inputCreatePost = document.querySelector(".input-create-post");
+    let expandedPost = document.getElementById("expandedPost");
+    let btnCreatePost = document.querySelector(".btn-create-post");
+    let nameInfoUser = document.querySelector(".name-info-user-create-post");
+    let textarea = document.querySelector('.expanded-post textarea');
+
+    // Mở hộp nhập bài viết
+    inputCreatePost.addEventListener("click", function () {
+        inputCreatePost.style.display = 'none';
+        expandedPost.style.display = 'flex';
+        nameInfoUser.style.display = 'inline-block';
+    });
+
+    // Click bên ngoài để đóng hộp nhập bài viết
+    document.addEventListener("click", function (event) {
+        if (!postBox.contains(event.target)) {
+            expandedPost.style.display = "none";
+            inputCreatePost.style.display = "block";
+            nameInfoUser.style.display = "none";
+        }
+    });
+
+    // Gửi bài viết
+    btnCreatePost.addEventListener("click", function () {
+        let content = textarea.value.trim();
+        if (content !== '') {
+            alert("Bài viết đã được đăng: " + content);
+            textarea.value = '';
+        }
+        expandedPost.style.display = 'none';
+        inputCreatePost.style.display = 'block';
+        nameInfoUser.style.display = "none";
+    });
 
 });

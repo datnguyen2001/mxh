@@ -296,11 +296,15 @@
                 
                 <?php echo $__env->make('components.template.economic-calendar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
+                <div class="box-stream-item box-stream-item-load"></div>
+                <div class="list__viewmore"></div>
+
             </div>
 
         </div>
         <?php echo $__env->make('components.template.page-right', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     </div>
+
     
     <div class="modal-background">
         <div class="modal-background1 close-popup">
@@ -332,41 +336,14 @@
             </div>
         </div>
     </div>
+
+    <div class="configHidden">
+        <?php echo $ZoneInfoClientScript ?? ''; ?>
+
+    </div>
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('js'); ?>
-    <script>
-        document.addEventListener("click", function (event) {
-            let postBox = document.querySelector(".box-create-post");
-            let inputCreatePost = document.querySelector(".input-create-post");
-            let expandedPost = document.getElementById("expandedPost");
 
-            // Kiểm tra xem click có nằm trong phần box-create-post không
-            if (!postBox.contains(event.target)) {
-                // Nếu click bên ngoài, ẩn expandedPost và hiển thị input lại
-                expandedPost.style.display = "none";
-                inputCreatePost.style.display = "block";
-                document.querySelector('.name-info-user-create-post').style.display = "none";
-            }
-        });
-
-        function expandPostBox() {
-            document.querySelector('.input-create-post').style.display = 'none';
-            document.getElementById('expandedPost').style.display = 'flex';
-            document.querySelector('.name-info-user-create-post').style.display = 'inline-block';
-        }
-
-        function submitPost() {
-            let content = document.querySelector('.expanded-post textarea').value;
-            if (content.trim() !== '') {
-                alert("Bài viết đã được đăng: " + content);
-                document.querySelector('.expanded-post textarea').value = '';
-            }
-            // Ẩn lại phần mở rộng sau khi đăng bài
-            document.getElementById('expandedPost').style.display = 'none';
-            document.querySelector('.input-create-post').style.display = 'block';
-            document.querySelector('.name-info-user-create-post').style.display = "none";
-        }
-    </script>
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('layout.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\laragon\www\mxh-v2-main\resources\views/home/index3.blade.php ENDPATH**/ ?>

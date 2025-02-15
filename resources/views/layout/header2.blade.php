@@ -40,9 +40,19 @@
                 <div class="box-noti-header">
                     <img src="{{asset('image/icon-noti.png')}}" alt="" class="header-icon-bell">
                 </div>
-                <a href="javascript:;" class="box-account-header" id="head_login">
-                    <img src="{{asset('image/avatar-user-df.png')}}" alt="" class="header-icon-user">
-                </a>
+                <div id="head_islogin">
+                    <a href="javascript:;" class="box-account-header" id="head_login">
+                        <img src="{{asset('image/avatar-user-df.png')}}" alt="" class="header-icon-user">
+                    </a>
+                    <div class="header__profile" style="min-width: 225px;">
+                        <div class="header__profile--v2">
+                            <p class="header__profile--title">Xin chào, <span class="header__profile--title h_name">User name</span>
+                            </p>
+                            <a href="#" class="header__profile--option" title="Tài khoản của tôi">Tài khoản của tôi</a>
+                            <a href="javascript:;" class="header__profile--option" id="head_logout" rel="nofollow">Đăng xuất</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -80,4 +90,14 @@
             </div>
         </a>
     </div>
+</div>
+
+<div class="mobile-menu">
+    <div class="mobile-menu-content">
+        <div class="header__search-box">
+            <img src="{{asset('image/icon-search.png')}}" alt="" class="icon-box-search">
+            <input type="text" class="input-header-search" placeholder="Tìm kiếm">
+        </div>
+    </div>
+    @include('layout.footer2')
 </div>

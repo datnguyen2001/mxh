@@ -297,11 +297,15 @@
                 {{--lịch kinh tế--}}
                 @include('components.template.economic-calendar')
 
+                <div class="box-stream-item box-stream-item-load"></div>
+                <div class="list__viewmore"></div>
+
             </div>
 
         </div>
         @include('components.template.page-right')
     </div>
+
     {{-- Modal--}}
     <div class="modal-background">
         <div class="modal-background1 close-popup">
@@ -333,39 +337,11 @@
             </div>
         </div>
     </div>
+
+    <div class="configHidden">
+        {!! $ZoneInfoClientScript ?? '' !!}
+    </div>
 @endsection
 @section('js')
-    <script>
-        document.addEventListener("click", function (event) {
-            let postBox = document.querySelector(".box-create-post");
-            let inputCreatePost = document.querySelector(".input-create-post");
-            let expandedPost = document.getElementById("expandedPost");
 
-            // Kiểm tra xem click có nằm trong phần box-create-post không
-            if (!postBox.contains(event.target)) {
-                // Nếu click bên ngoài, ẩn expandedPost và hiển thị input lại
-                expandedPost.style.display = "none";
-                inputCreatePost.style.display = "block";
-                document.querySelector('.name-info-user-create-post').style.display = "none";
-            }
-        });
-
-        function expandPostBox() {
-            document.querySelector('.input-create-post').style.display = 'none';
-            document.getElementById('expandedPost').style.display = 'flex';
-            document.querySelector('.name-info-user-create-post').style.display = 'inline-block';
-        }
-
-        function submitPost() {
-            let content = document.querySelector('.expanded-post textarea').value;
-            if (content.trim() !== '') {
-                alert("Bài viết đã được đăng: " + content);
-                document.querySelector('.expanded-post textarea').value = '';
-            }
-            // Ẩn lại phần mở rộng sau khi đăng bài
-            document.getElementById('expandedPost').style.display = 'none';
-            document.querySelector('.input-create-post').style.display = 'block';
-            document.querySelector('.name-info-user-create-post').style.display = "none";
-        }
-    </script>
 @endsection

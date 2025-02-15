@@ -27,6 +27,7 @@ mix.scripts([
     "resources/core/js/main/utility.js",
     "resources/template/web/js/home.js",
     "resources/template/web/js/post.js",
+    "resources/core/js/main/timeline.js",
 
 ], "public/web_js/20240927/cungcau.base.js").minify(
     "public/web_js/20240927/cungcau.base.js");

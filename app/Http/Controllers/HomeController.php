@@ -30,10 +30,16 @@ class HomeController extends Controller
         $homePostMore = $this->news->formatNewsDefault($pipeLineData['homePostMore'] ?? [],592,370,$homePostTop9,10,0,0,10);
         $homePost = array_merge($homePostTop9, $homePostMore);
 
+        $ZoneInfoClientScript = '
+        <input type="hidden" name="hdZoneHome" id="hdZoneHome" value="1" />
+        <input type="hidden" name="hdZoneId" id="hdZoneId" value="0" />
+        <input type="hidden" name="hdPageIndex" id="hdPageIndex" value="1" />';
+
         $data = [
             'featuredTopics' => $featuredTopics,
             'trendPost'=>$trendPost,
             'homePost'=>$homePost,
+            'ZoneInfoClientScript' => $ZoneInfoClientScript,
         ];
 
         return view('home.index3', $data);
@@ -52,23 +58,17 @@ class HomeController extends Controller
     public function homeLoadingPage2()
     {
         // Load configuration và dữ liệu
-        $zoneALL = $this->zone->getZoneByKey();
-        $zoneConfig = require(config_path() . '/keyPageWeb/zone_home2.php');
-        $keyByZone = $this->news->binKeyPipeline($zoneConfig ?? []);
-        $homeKey = array_merge($keyByZone ?? [], include(config_path() . '/keyPageWeb/home_page2.php'));
-        $pipeLineData = $this->redisPipeLine->getDataByPipeLine($homeKey);
-
-        // Xử lý dữ liệu theo vùng
-        $dataByZone = $this->news->prepareDataByZone($zoneConfig, $pipeLineData, $zoneALL, $keyByZone);
-
-        // Xử lý dữ liệu cho các box
-        $data = [
-            'dataByZone' => $dataByZone,
-            'boxAnh' => $this->news->formatBoxData($pipeLineData['boxAnh'] ?? [], 1160,725,[],5,0,0,5),
-            'boxInfographic' => $this->news->formatBoxData($pipeLineData['boxInfographic'] ?? [], 400,250,[],4,0,0,4),
-            'boxVideo' => $this->news->formatBoxData($pipeLineData['boxVideo'] ?? [], 830,481,[],1,111,69,10),
-            'boxMostView' => $this->news->formatNewsDefault($pipeLineData['boxMostView'] ?? [], 203,126,[],6,0,0,6),
+        $key = [
+            'listPostMore' => [
+                'cmd' => 'zrevrange',
+                'key' => sprintf(config('keyredis.KeyNewsInZoneIsOnHome') ?? '', 0),
+                'start' => 0,
+                'stop' => 19,
+            ],
         ];
-        return view('home.index2', $data);
+        $pipeLineData = $this->redisPipeLine->getDataByPipeLine($key);
+        $dataPostMore = $this->news->formatNewsDefault($pipeLineData['listPostMore'] ?? [],592,370,[],10,0,0,10);
+
+        return view('home.index4', compact('dataPostMore'));
     }
 }

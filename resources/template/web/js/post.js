@@ -1,5 +1,13 @@
 let assetUrl = document.querySelector('meta[name="asset-url"]').getAttribute("content");
-var ckUser = JSON.parse(getCookie("_ck_user"));
+let ckUserData = getCookie("_ck_user");
+let ckUser = null;
+if (ckUserData) {
+    try {
+        ckUser = JSON.parse(ckUserData);
+    } catch (e) {
+        ckUser = null;
+    }
+}
 
 function getCookie(c_name) {
     if (document.cookie.length > 0) {
@@ -152,6 +160,13 @@ $(document).ready(function () {
 
     // yêu thích bài viết và bỏ yêu thích bài viết
     $(".add-icon-favourite").on("click", function () {
+        // Kiểm tra nếu ckUser không có dữ liệu thì đến trang đăng nhập
+        if (!ckUser || !ckUser.id) {
+            console.log("Người dùng chưa đăng nhập, chuyển hướng sang đăng nhập");
+            $("#head_login").trigger("click");
+            return;
+        }
+
         let postContainer = $(this).closest(".box-post-full");
         let newsId = postContainer.find("input[name='newsId']").val();
         let type = postContainer.find("input[name='type']").val();

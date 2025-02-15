@@ -35,7 +35,7 @@
     ((newnews)?"/timelinenewnews/{0}/{1}.htm":"/timelinelist/{0}/{1}.htm"))))))))))))));
     keys = (tag) ? tag : ((keyword) ? keyword : (keywordVideo) ? keywordVideo : ((newbytype)?newbytype:((video)?video:((live)?live:((radio)?radio:((newmostview)?newmostview:((newnews)?newnews:((topic)?topic : zoneID))))))));
     $(window).scroll(function () {
-        x = ($(window).scrollTop() + $(window).height()) + 700;
+        x = ($(window).scrollTop() + $(window).height()) + 400;
         y = 0;
         if ($('.list__viewmore').length > 0)
             y = ($('.list__viewmore').offset().top);
@@ -166,8 +166,9 @@ var timeline = function () {
                     try{
 
                         //Check trùng item với loadmore
-                        var divCheckRemove = $('.box-stream-item-load').parents('.box-category-middle');
-                        divCheckRemove.find('.box-category-item').each(function () {
+                        // var divCheckRemove = $('.box-stream-item-load').parents('.box-category-middle');
+                        // divCheckRemove.find('.box-category-item').each(function () {
+                        $('.box-post-full').each(function () {
                             var newsId = $(this).attr('data-id');
                             if (typeof newsId != 'undefined') {
                                 if (obj[newsId]) {
